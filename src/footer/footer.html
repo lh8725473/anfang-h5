@@ -1,0 +1,10 @@
+<div class="tabs tabs-icon-top" ng-controller="App.Footer.Controller">
+  <a class="tab-item" ng-class="{ activat: $state.includes('gameList') }" ui-sref="gameList()">
+    <i class="icon ion-home"></i>
+    赛事报名
+  </a>
+  <a class="tab-item" ng-class="{ activat: $state.includes('user') }" ui-sref="user()">
+    <i class="icon ion-star"></i>
+    个人中心
+  </a>
+</div>

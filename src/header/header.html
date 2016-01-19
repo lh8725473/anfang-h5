@@ -1,3 +1,13 @@
 <div class="header" ng-controller="App.Header.Controller">
-    {{user.fullname}}
+    <ion-slide-box on-slide-changed="slideChanged(index)" auto-play="true" show-pager="false" does-continue="true" slide-interval="2000" ng-if="3">
+	    <ion-slide>
+	        <img src="img/1.png" />
+	    </ion-slide>
+	    <ion-slide>
+	        <img src="img/1.png"/>
+	    </ion-slide>
+	    <ion-slide>
+	        <img src="img/1.png" />
+	    </ion-slide>
+	</ion-slide-box>
 </div>

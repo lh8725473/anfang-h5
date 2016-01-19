@@ -1,4 +1,4 @@
-angular.module('App.Header', []).controller('App.Header.Controller', [
+angular.module('App.GameList', []).controller('App.GameList.Controller', [
     '$scope',
     'User',
     function(

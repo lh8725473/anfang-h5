@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="App">
+<html ng-app="ionicApp">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,8 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- build:css css/bms-lib.css -->
-    <link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="../bower_components/normalize-css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../bower_components/ionic/release/css/ionic.css">
     <!-- endbuild -->
 
 	<!-- build:css css/bms.css -->
@@ -20,15 +19,25 @@
     <!-- loading div -->
     <div class="" ng-include="'loading/loading.html'" ng-controller='App.Loading.Controller'></div>
 
+    <!-- router div -->
+    <div class="router-div" ui-view></div>
+
     <!-- header div -->
-    <div class="header" ng-include="'header/header.html'"></div>
+    <!-- <div class="header" ng-include="'header/header.html'"></div> -->
+
+    <!-- main div -->
+	<!-- <div class="main" ng-include="'main/main.html'"></div> -->
+
+	<!-- footer div -->
+    <div class="footer" ng-include="'footer/footer.html'"></div>
   
 	
 
 	<!-- build:js js/bms-lib.js -->
     <script type="text/javascript" src="../bower_components/jquery/dist/jquery.js"></script>
-    <script type="text/javascript" src="../bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="../bower_components/ionic/release/js/ionic.bundle.js"></script>
     <script type="text/javascript" src="../bower_components/angular-resource/angular-resource.js"></script>
+	<script type="text/javascript" src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <!-- endbuild -->
 
 	<!-- build:js js/bms.js -->
@@ -42,6 +51,15 @@
 
 	<!-- header -->
 	<script type="text/javascript" src="header/header.js"></script>
+
+	<!-- game-list -->
+	<script type="text/javascript" src="game-list/game-list.js"></script>
+
+	<!-- user -->
+	<script type="text/javascript" src="user/user.js"></script>
+
+	<!-- footer -->
+	<script type="text/javascript" src="footer/footer.js"></script>
 
 	<script type="text/javascript" src="app.js"></script>
 

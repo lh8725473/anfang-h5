@@ -39,3 +39,25 @@
   100% {
     transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
     -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg); } }
+
+.header {
+  width: 100%;
+  height: 200px; }
+  .header .slider {
+    height: 100%; }
+  .header .slider-slide img {
+    width: 100%; }
+
+.footer .activat {
+  box-shadow: none;
+  border-color: #d1d3d6;
+  color: #007aff;
+  background: #e4e5e7; }
+
+.main {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 200px;
+  bottom: 50px;
+  overflow: auto; }
