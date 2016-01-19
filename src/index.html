@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="App">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>bms测试</title>
+	<meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- build:css css/bms-lib.css -->
+    <link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../bower_components/normalize-css/normalize.css">
+    <!-- endbuild -->
+
+	<!-- build:css css/bms.css -->
+	<link rel="stylesheet" type="text/css" href="app.css">
+	<!-- endbuild -->
+</head>
+<body>
+    <!-- loading div -->
+    <div class="" ng-include="'loading/loading.html'" ng-controller='App.Loading.Controller'></div>
+
+    <!-- header div -->
+    <div class="header" ng-include="'header/header.html'"></div>
+  
+	
+
+	<!-- build:js js/bms-lib.js -->
+    <script type="text/javascript" src="../bower_components/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="../bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="../bower_components/angular-resource/angular-resource.js"></script>
+    <!-- endbuild -->
+
+	<!-- build:js js/bms.js -->
+
+	<!-- loading -->
+	<script type="text/javascript" src="loading/loading.js"></script>
+
+	<!-- Modules -->
+	<script type="text/javascript" src="models/models.js"></script>
+	<script type="text/javascript" src="models/user.js"></script>
+
+	<!-- header -->
+	<script type="text/javascript" src="header/header.js"></script>
+
+	<script type="text/javascript" src="app.js"></script>
+
+
+	<!-- endbuild -->
+
+</body>
+</html>

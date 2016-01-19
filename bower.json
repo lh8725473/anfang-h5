@@ -1,0 +1,31 @@
+{
+  "name": "jiaju_web",
+  "version": "0.0.0",
+  "homepage": "https://github.com/lh8725473/jiaju_web",
+  "authors": [
+    "haol <171213574@qq.com>"
+  ],
+  "description": "jiaju_web",
+  "main": "index.html",
+  "keywords": [
+    "jiaju"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.8",
+    "angular-bootstrap": "~1.0.3",
+    "angular-resource": "~1.4.8",
+    "angular-ui-router": "~0.2.15",
+    "bootstrap": "~3.3.5",
+    "bootstrap-sass": "~3.3.5",
+    "jquery": "~2.1.4",
+    "normalize-css": "normalize.css#~3.0.3"
+  }
+}
