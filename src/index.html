@@ -18,18 +18,16 @@
 <body>
     <!-- loading div -->
     <div class="" ng-include="'loading/loading.html'" ng-controller='App.Loading.Controller'></div>
+	
+	<!-- header div -->
+    <!-- <div class="header" ng-include="'header/header.html'"></div> -->
 
     <!-- router div -->
     <div class="router-div" ui-view></div>
 
-    <!-- header div -->
-    <!-- <div class="header" ng-include="'header/header.html'"></div> -->
-
-    <!-- main div -->
-	<!-- <div class="main" ng-include="'main/main.html'"></div> -->
 
 	<!-- footer div -->
-    <div class="footer" ng-include="'footer/footer.html'"></div>
+    <!-- <div class="footer" ng-include="'footer/footer.html'"></div> -->
   
 	
 
@@ -53,7 +51,10 @@
 	<script type="text/javascript" src="header/header.js"></script>
 
 	<!-- game-list -->
+	<script type="text/javascript" src="game-list/carousel/carousel.js"></script>
+	<script type="text/javascript" src="game-list/list/list.js"></script>
 	<script type="text/javascript" src="game-list/game-list.js"></script>
+	
 
 	<!-- user -->
 	<script type="text/javascript" src="user/user.js"></script>

@@ -1,13 +1,11 @@
-angular.module('App.GameList', ['App.GameList.Carousel','App.GameList.List']).controller('App.GameList.Controller', [
+angular.module('App.GameList.Carousel', []).controller('App.GameList.Carousel.Controller', [
     '$scope',
-    '$state',
     'User',
     function(
         $scope,
-        $state,
         User
     ) {
-        $scope.$state = $state
+
         //$scope.news = [1,2,3,2]
         // $scope.user = User.getUser()
 

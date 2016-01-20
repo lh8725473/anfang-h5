@@ -1,4 +1,39 @@
 <div class="game-list" ng-controller="App.GameList.Controller">
-	<div class="header" ng-include="'header/header.html'"></div>
-    <div class="main" ng-include="'main/main.html'"></div>
+	<div ng-include="'game-list/carousel/carousel.html'"></div>
+	<div class="search">
+		<label class="item item-input item-select">
+		    <select>
+		      <option selected>日期</option>
+		      <option>一月</option>
+		      <option>二月</option>
+		    </select>
+		 </label>
+		 <label class="item item-input item-select">
+		    <select>
+		      <option selected>地区</option>
+		      <option>北京</option>
+		      <option>武汉</option>
+		    </select>
+		 </label>
+		 <label class="item item-input item-select">
+		    <select>
+		      <option selected>筛选</option>
+		      <option>12</option>
+		      <option>123123</option>
+		    </select>
+		 </label>
+	</div>
+    <div ng-include="'game-list/list/list.html'"></div>
+    <div class="footer">
+    	<div class="tabs tabs-icon-left">
+		  <a class="tab-item">
+		    <i class="icon ion-ios-list"></i>
+		    赛事报名
+		  </a>
+		  <a class="tab-item">
+		    <i class="icon ion-person"></i>
+		    个人中心
+		  </a>
+		</div>
+    </div>
 </div>

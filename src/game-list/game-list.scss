@@ -1,3 +1,35 @@
-.GameList {
-    
+@import "carousel/carousel.scss";
+@import "list/list.scss";
+
+.game-list {
+    .search{
+    	height: 45px;
+    	.item-select{
+    		float: left;
+    		height: 50px;
+    		width: 30%;
+    		border: none;
+    		select{
+    			width: 100%;
+    			max-width: 100%;
+    		}
+    	}
+    }
+
+    .button.button-assertive{
+        background-color: #ff7a11;
+    }
+
+    .footer{
+        .tab-item{
+            max-width: 50%;
+            width: 50%;
+
+        }
+        .tabs{
+           background-color: #ff7a11;
+           color: #fff; 
+        }
+    }
+
 }

@@ -24,10 +24,13 @@ var appModule = angular.module('ionicApp', [
     'App.Header',
     'App.Footer',
     'App.GameList',
+    'App.Enroll',
     'App.User'
 
 ]);
 
+
+//路由配置
 appModule.config([
     '$stateProvider',
     '$urlRouterProvider',
@@ -41,10 +44,17 @@ appModule.config([
                 url: '/gameList',
                 templateUrl: 'game-list/game-list.html'
             })
-
+            .state('enroll', {
+                url: '/enroll',
+                templateUrl: 'enroll/enroll.html'
+            })
             .state('user', {
                 url: '/user',
                 templateUrl: 'user/user.html'
+            })
+            .state('gameDetail', {
+                url: '/gameDetail/:id',
+                templateUrl: 'game-detail/game-detail.html'
             })
             // .state('links.linkRecord', {
             //     url: '/linkRecord',
