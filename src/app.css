@@ -76,7 +76,8 @@
   right: 0;
   top: 250px;
   bottom: 50px;
-  overflow: auto; }
+  overflow-y: auto;
+  overflow-x: hidden; }
 
 .game-list .search {
   height: 45px; }
@@ -95,6 +96,9 @@
 .game-list .footer .tab-item {
   max-width: 50%;
   width: 50%; }
+
+.game-list .footer .enroll-tab {
+  border-right: 1px solid #fff; }
 
 .game-list .footer .tabs {
   background-color: #ff7a11;

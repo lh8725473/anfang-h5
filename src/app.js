@@ -24,6 +24,7 @@ var appModule = angular.module('ionicApp', [
     'App.Header',
     'App.Footer',
     'App.GameList',
+    'App.GameDetail',
     'App.Enroll',
     'App.User'
 
@@ -53,7 +54,7 @@ appModule.config([
                 templateUrl: 'user/user.html'
             })
             .state('gameDetail', {
-                url: '/gameDetail/:id',
+                url: '/gameDetail/:gameId',
                 templateUrl: 'game-detail/game-detail.html'
             })
             // .state('links.linkRecord', {

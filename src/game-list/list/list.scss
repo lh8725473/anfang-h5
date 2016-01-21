@@ -4,5 +4,6 @@
     right: 0;
     top: 250px;
     bottom: 50px;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
