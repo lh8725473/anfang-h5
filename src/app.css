@@ -103,3 +103,37 @@
 .game-list .footer .tabs {
   background-color: #ff7a11;
   color: #fff; }
+
+.game-detail .game-img {
+  width: 100%;
+  height: 150px; }
+
+.game-detail .text-process {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  position: absolute;
+  top: 150px;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  overflow-y: auto; }
+  .game-detail .text-process .orange {
+    color: #ff7a11; }
+  .game-detail .text-process .game-text {
+    padding-top: 5px;
+    border-top: 1px solid #b2b2b2;
+    border-bottom: 1px solid #b2b2b2; }
+  .game-detail .text-process .game-process {
+    margin-top: 10px; }
+
+.game-detail .tabs {
+  cursor: pointer;
+  background-color: #fff; }
+
+.game-detail .button.icon-right:before {
+  font-size: 15px; }
+
+.game-detail .button.button-calm {
+  background-color: #fff;
+  color: #ff7a11; }

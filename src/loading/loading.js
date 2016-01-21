@@ -40,7 +40,7 @@ angular.module('App.Loading', []).controller('App.Loading.Controller', [
             var $body = $('body')
             document.title = window_title
             // hack在微信等webview中无法修改document.title的情况
-            var $iframe = $('<iframe src=""></iframe>').on('load', function() {
+            var $iframe = $('<iframe src="./3123.png"></iframe>').on('load', function() {
               setTimeout(function() {
                 $iframe.off('load').remove()
               }, 0)
