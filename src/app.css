@@ -137,3 +137,51 @@
 .game-detail .button.button-calm {
   background-color: #fff;
   color: #ff7a11; }
+
+.process-detail .orange {
+  color: #ff7a11; }
+
+.process-detail .ioc-blank {
+  width: 5px;
+  background-color: #000000; }
+
+.process-detail .title {
+  padding: 10px 15px;
+  border-bottom: 1px solid #b2b2b2; }
+  .process-detail .title .title-text {
+    margin-left: 10px; }
+
+.process-detail .way {
+  display: inline-block; }
+  .process-detail .way .way-title {
+    float: left; }
+  .process-detail .way .line {
+    float: left; }
+
+.process-detail .text-process {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  position: absolute;
+  top: 50px;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  overflow-y: auto; }
+  .process-detail .text-process .game-text {
+    padding-top: 5px;
+    border-top: 1px solid #b2b2b2;
+    border-bottom: 1px solid #b2b2b2; }
+  .process-detail .text-process .game-process {
+    margin-top: 10px; }
+
+.process-detail .tabs {
+  cursor: pointer;
+  background-color: #fff; }
+
+.process-detail .button.icon-right:before {
+  font-size: 15px; }
+
+.process-detail .button.button-calm {
+  background-color: #fff;
+  color: #ff7a11; }

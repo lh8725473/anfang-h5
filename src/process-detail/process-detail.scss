@@ -1,0 +1,60 @@
+.process-detail {
+	.orange{
+		color: #ff7a11;
+	}
+	.ioc-blank{
+		width: 5px;
+		background-color: #000000;
+	}
+	.title{
+		padding:10px 15px;
+		border-bottom: 1px solid #b2b2b2;
+		.title-text{
+			margin-left: 10px;
+		}
+	}
+	.way{
+		display: inline-block;
+		.way-title{
+			float: left;
+		}
+		.line{
+			float: left;
+		}
+	}
+	.text-process{
+		padding-left: 15px;
+		padding-right: 15px;
+		padding-top: 15px;
+		position: absolute;
+		top: 50px;
+		bottom: 50px;
+		left: 0;
+		right: 0;
+		overflow-y: auto;
+		.game-text{
+			padding-top: 5px;
+			border-top: 1px solid #b2b2b2;
+			border-bottom: 1px solid #b2b2b2;
+		}
+
+		.game-process{
+			margin-top: 10px;
+		}
+
+	}
+
+	.tabs{
+		cursor: pointer;
+		background-color: #fff;
+	}
+	
+	.button.icon-right:before{
+		font-size: 15px;
+	}
+
+    .button.button-calm{
+    	background-color: #fff;
+    	color: #ff7a11;
+    }
+}

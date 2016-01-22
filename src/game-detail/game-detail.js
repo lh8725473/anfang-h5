@@ -1,18 +1,16 @@
 angular.module('App.GameDetail', []).controller('App.GameDetail.Controller', [
     '$scope',
-    'User',
+    '$state',
     function(
         $scope,
-        User
+        $state
     ) {
 
-        //$scope.news = [1,2,3,2]
-        // $scope.user = User.getUser()
-
-        // $scope.user.$promise.then(function(user) {
-        //     console.log('aa')
-
-        // })
+        $scope.goDetail = function() {
+            $state.go('processDetail', {
+                processId: $state.params.gameId
+            })
+        }
 
 
 
