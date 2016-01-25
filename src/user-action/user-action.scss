@@ -1,0 +1,58 @@
+.user-action {
+
+    .title{
+        margin-left: 15px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        .ion-card{
+            color: #7bd474;
+            margin-right: 5px;
+            font-size: 25px;
+            position: relative;
+            top: 3px;
+        }
+    }
+
+    .action-list{
+        position: absolute;
+        top: 70px;
+        bottom: 50px;
+        left: 0;
+        right: 0;
+        overflow-y: auto;
+        overflow-x: hidden;
+        .button.button-assertive{
+            width: 100px;
+            float: right;
+            background-color: #e93a3a;
+        }
+
+    }
+
+    .item-avatar > img:first-child{
+    	max-width: 70px;
+    	max-height: 70px;
+    }
+
+    a.item.item-avatar{
+    	padding-left: 110px;
+    	min-height: 110px;
+    }
+
+    .footer{
+        .tab-item{
+            max-width: 50%;
+            width: 50%;
+
+        }
+        .enroll-tab{
+            border-right: 1px solid #fff;
+        }
+        
+        .tabs{
+           background-color: #ff7a11;
+           color: #fff; 
+        }
+    }
+
+}

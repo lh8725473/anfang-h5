@@ -1,4 +1,4 @@
-angular.module('App.User', []).controller('App.User.Controller', [
+angular.module('App.User', ['App.User.Me', 'App.User.Action', 'App.User.Enroll']).controller('App.User.Controller', [
     '$scope',
     'User',
     function(
@@ -6,13 +6,13 @@ angular.module('App.User', []).controller('App.User.Controller', [
         User
     ) {
 
-        //$scope.news = [1,2,3,2]
-        // $scope.user = User.getUser()
+        $scope.news = [1,2,3,2]
+        $scope.user = User.getUser()
 
-        // $scope.user.$promise.then(function(user) {
-        //     console.log('aa')
+        $scope.user.$promise.then(function(user) {
+            console.log('aa')
 
-        // })
+        })
 
 
 

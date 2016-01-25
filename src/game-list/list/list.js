@@ -1,11 +1,14 @@
 angular.module('App.GameList.List', []).controller('App.GameList.List.Controller', [
     '$scope',
-    'User',
+    '$sce',
+    'Game',
+
     function(
         $scope,
-        User
+        $sce,
+        Game
     ) {
-
+        $scope.$sce = $sce
         //$scope.news = [1,2,3,2]
         // $scope.user = User.getUser()
 
@@ -13,6 +16,16 @@ angular.module('App.GameList.List', []).controller('App.GameList.List.Controller
         //     console.log('aa')
 
         // })
+
+        $scope.game_list = Game.getGameList()
+
+        $scope.game_list.$promise.then(function(game) {
+            
+        })
+
+        $scope.trustAsHtml = function(game){
+            return $sce.trustAsHtml(game.introduce)
+        }
 
 
 

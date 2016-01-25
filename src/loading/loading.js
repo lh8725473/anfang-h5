@@ -20,10 +20,10 @@ angular.module('App.Loading', []).controller('App.Loading.Controller', [
             var state_name = toState.name
             var window_title = '赛事'
             switch(state_name){
-                case "gameList":
+                case "game-list":
                     window_title = '赛事'
                     break
-                case "gameDetail":
+                case "game-detail":
                     window_title = '赛事详情'
                     break
                 case "user":

@@ -1,4 +1,4 @@
-.user {
+.user-me {
 
 	.list{
 		margin-bottom: 0px;
@@ -19,10 +19,13 @@
     		border-top-width: 15px;
     		border-bottom-width: 15px;
     	}
+
+        .button{
+            margin-top: 10px;
+            width: 100px;
+            background-color: #ff7a11;
+        }
     	
-    	h2{
-    		padding-top: 20px;
-    	}
     	p{
     		padding-top: 10px;
     	}
@@ -35,17 +38,17 @@
 
     .footer{
         .tab-item{
-            max-width: 50%;
-            width: 50%;
+            max-width: 100%;
+            width: 100%;
 
-        }
-        .enroll-tab{
-            border-right: 1px solid #fff;
         }
         
         .tabs{
            background-color: #ff7a11;
            color: #fff; 
+        }
+        a{
+            font-size: 20px;
         }
     }
 
