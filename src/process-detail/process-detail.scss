@@ -45,16 +45,10 @@
 	}
 
 	.tabs{
-		cursor: pointer;
-		background-color: #fff;
-	}
-	
-	.button.icon-right:before{
-		font-size: 15px;
-	}
-
-    .button.button-calm{
-    	background-color: #fff;
-    	color: #ff7a11;
+        .button-block{
+            margin-top: 0;
+            margin-bottom: 0;
+            background-color: #ff7a11;
+        }
     }
 }

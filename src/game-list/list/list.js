@@ -1,14 +1,14 @@
 angular.module('App.GameList.List', []).controller('App.GameList.List.Controller', [
     '$scope',
-    '$sce',
+    '$state',
     'Game',
 
     function(
         $scope,
-        $sce,
+        $state,
         Game
     ) {
-        $scope.$sce = $sce
+        //$scope.$sce = $sce
         //$scope.news = [1,2,3,2]
         // $scope.user = User.getUser()
 
@@ -23,8 +23,16 @@ angular.module('App.GameList.List', []).controller('App.GameList.List.Controller
             
         })
 
-        $scope.trustAsHtml = function(game){
-            return $sce.trustAsHtml(game.introduce)
+        // $scope.trustAsHtml = function(game){
+        //     return $sce.trustAsHtml(game.introduce)
+        // }
+
+        $scope.goRnrooll = function($event, game_id){
+            $event.stopPropagation()
+            $event.preventDefault()
+            $state.go('enroll', {
+                enroll_id: game_id
+            })
         }
 
 

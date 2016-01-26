@@ -1,11 +1,14 @@
-angular.module('App.User', ['App.User.Me', 'App.User.Action', 'App.User.Enroll', 'App.User.Safe']).controller('App.User.Controller', [
+angular.module('App.User.BindPhone', []).controller('App.User.BindPhone.Controller', [
     '$scope',
-    'User',
+    'Utils',
     function(
         $scope,
-        User
+        Utils
     ) {
 
+        $scope.getCode = function($event){
+            Utils.countdownTimer($($event.currentTarget))
+        }
         // $scope.news = [1,2,3,2]
         // $scope.user = User.getUser()
 

@@ -1,9 +1,11 @@
 angular.module('App.ProcessDetail', []).controller('App.ProcessDetail.Controller', [
     '$scope',
     '$state',
+    'Game',
     function(
         $scope,
-        $state
+        $state,
+        Game
     ) {
 
         console.log($state)
@@ -14,6 +16,16 @@ angular.module('App.ProcessDetail', []).controller('App.ProcessDetail.Controller
         //     console.log('aa')
 
         // })
+
+        $scope.event_list = Game.getEventList({
+            id: $state.params.process_id
+        })
+
+        $scope.goEnroll = function(){
+            $state.go('enroll', {
+                enroll_id: $state.params.process_id
+            })
+        }
 
 
 

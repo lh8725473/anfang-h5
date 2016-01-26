@@ -1,4 +1,4 @@
-.enroll {
+.game-package{
 	.header{
 		border-bottom: 1px solid #b2b2b2;
 		text-align: center;
@@ -26,27 +26,15 @@
 	.scroll-content{
 		position: relative;
 	}
-
-	.tuanti{
-		margin-top: 10px;
-		padding-left: 10px;
-		a{
-			color: #ff7a11;
-		}
+	
+	.checkbox{
+		background-color: #ff7a11;
 	}
-	.header .col {
-    	
-	}
-
-	.col {
-	    
-	}
-
-	.col:last-child {
-	    
-	}
-
-	.row:last-child .col {
-	    
-	}    
+	.tabs{
+        .button-block{
+            margin-top: 0;
+            margin-bottom: 0;
+            background-color: #ff7a11;
+        }
+    }  
 }

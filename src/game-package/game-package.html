@@ -1,0 +1,17 @@
+<div class="game-package" ng-controller="App.GamePackage.Controller">
+    <ion-content>
+        <div class="row header">
+          <div class="col">选择</div>
+          <div class="col">套餐</div>
+          <div class="col">详情</div>
+        </div>
+        <div class="row data" ng-repeat="data in data">
+          <div class="col"><input type="checkbox" class="checkbox" /></div>
+          <div class="col">{{data.code}}</div>
+          <div class="col">{{data.code}}</div>
+        </div>
+    </ion-content>
+    <div class="tabs">
+      <button class="button button-block button-positive">下一步</button>
+    </div>
+</div>

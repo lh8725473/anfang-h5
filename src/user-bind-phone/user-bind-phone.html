@@ -1,0 +1,19 @@
+<div class="user-bind-phone" ng-controller="App.User.BindPhone.Controller">
+
+	<div class="list list-inset">
+	  <label class="item item-input">
+	    <input type="text" placeholder="请输入手机号">
+	  </label>
+	  <label class="item item-input code">
+	    <input type="text" placeholder="请输入验证码">
+	  </label>
+	  <button class="button button-small" ng-click="getCode($event)">
+      		获取验证码
+      </button>
+	</div>
+
+    <div class="tabs">
+		<button class="button button-block button-positive">验证手机</button>
+	</div>
+
+</div>

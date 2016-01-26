@@ -16,8 +16,8 @@ var appModule = angular.module('ionicApp', [
     // Models
     'App.Models',
 
-    // Widget
-    //'App.Widgets',
+    // Utils
+    'App.Utils',
 
     // Components
     'App.Loading',
@@ -27,6 +27,7 @@ var appModule = angular.module('ionicApp', [
     'App.GameDetail',
     'App.ProcessDetail',
     'App.Enroll',
+    'App.GamePackage',
     'App.User'
 
 ]);
@@ -78,9 +79,21 @@ appModule.config([
                 url: '/game-list',
                 templateUrl: 'game-list/game-list.html'
             })
+            .state('game-detail', {
+                url: '/game-detail/:game_id',
+                templateUrl: 'game-detail/game-detail.html'
+            })
+            .state('process-detail', {
+                url: '/process-detail/:process_id',
+                templateUrl: 'process-detail/process-detail.html'
+            })
             .state('enroll', {
-                url: '/enroll',
+                url: '/enroll/:enroll_id',
                 templateUrl: 'enroll/enroll.html'
+            })
+            .state('game-package', {
+                url: '/game-package/:package_id',
+                templateUrl: 'game-package/game-package.html'
             })
             .state('user', {
                 url: '/user',
@@ -102,14 +115,15 @@ appModule.config([
                 url: '/user-integration',
                 templateUrl: 'user-integration/user-integration.html'
             })
-            .state('game-detail', {
-                url: '/game-detail/:game_id',
-                templateUrl: 'game-detail/game-detail.html'
+            .state('user-safe', {
+                url: '/user-safe',
+                templateUrl: 'user-safe/user-safe.html'
             })
-            .state('process-detail', {
-                url: '/process-detail/:process_id',
-                templateUrl: 'process-detail/process-detail.html'
+            .state('user-bind-phone', {
+                url: '/user-bind-phone',
+                templateUrl: 'user-bind-phone/user-bind-phone.html'
             })
+            
             // .state('links.linkRecord', {
             //     url: '/linkRecord',
             //     templateUrl: 'src/app/links/link-record/template.html'

@@ -1,4 +1,4 @@
-angular.module('App.Models').factory('Game', [
+angular.module('App.Models').factory('Event', [
     '$resource',
     function(
         $resource
@@ -24,6 +24,7 @@ angular.module('App.Models').factory('Game', [
                 },
             isArray: true
             }
+
 
         })
     }

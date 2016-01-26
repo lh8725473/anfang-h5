@@ -40,13 +40,11 @@
     transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
     -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg); } }
 
-.header {
-  width: 100%;
-  height: 44px; }
-  .header .slider {
-    height: 100%; }
-  .header .slider-slide img {
-    width: 100%; }
+.header .slider {
+  height: 100%; }
+
+.header .slider-slide img {
+  width: 100%; }
 
 .footer .activat {
   box-shadow: none;
@@ -68,7 +66,8 @@
   .carousel .slider {
     height: 100%; }
   .carousel .slider-slide img {
-    width: 100%; }
+    width: 100%;
+    height: 100%; }
 
 .game-list.list {
   position: absolute;
@@ -80,6 +79,7 @@
   overflow-x: hidden; }
 
 .game-list .search {
+  width: 100%;
   height: 45px; }
   .game-list .search .item-select {
     float: left;
@@ -97,7 +97,7 @@
   max-width: 50%;
   width: 50%; }
 
-.game-list .footer .enroll-tab {
+.game-list .footer .game-tab {
   border-right: 1px solid #fff; }
 
 .game-list .footer .tabs {
@@ -175,16 +175,70 @@
   .process-detail .text-process .game-process {
     margin-top: 10px; }
 
-.process-detail .tabs {
-  cursor: pointer;
-  background-color: #fff; }
+.process-detail .tabs .button-block {
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: #ff7a11; }
 
-.process-detail .button.icon-right:before {
-  font-size: 15px; }
+.enroll .header {
+  border-bottom: 1px solid #b2b2b2;
+  text-align: center;
+  font-size: 16px;
+  line-height: 50px;
+  height: 70px; }
 
-.process-detail .button.button-calm {
-  background-color: #fff;
-  color: #ff7a11; }
+.enroll .data {
+  text-align: center;
+  margin-top: 0;
+  border-bottom: 1px solid #b2b2b2; }
+  .enroll .data .col {
+    line-height: 47px; }
+  .enroll .data .button-small {
+    margin-top: 10px;
+    background-color: #ff7a11;
+    color: #fff;
+    border-radius: 0;
+    width: 75px; }
+
+.enroll .scroll-content {
+  position: relative; }
+
+.enroll .tuanti {
+  margin-top: 10px;
+  padding-left: 10px; }
+  .enroll .tuanti a {
+    color: #ff7a11; }
+
+.game-package .header {
+  border-bottom: 1px solid #b2b2b2;
+  text-align: center;
+  font-size: 16px;
+  line-height: 50px;
+  height: 70px; }
+
+.game-package .data {
+  text-align: center;
+  margin-top: 0;
+  border-bottom: 1px solid #b2b2b2; }
+  .game-package .data .col {
+    line-height: 47px; }
+  .game-package .data .button-small {
+    margin-top: 10px;
+    background-color: #ff7a11;
+    color: #fff;
+    border-radius: 0;
+    width: 75px; }
+
+.game-package .scroll-content {
+  position: relative; }
+
+.game-package .checkbox {
+  background-color: #ff7a11; }
+
+.game-package .tabs .button-block {
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: #ff7a11; }
 
 .user .list {
   margin-bottom: 0px; }
@@ -350,3 +404,88 @@
 .user-enroll .footer .tabs {
   background-color: #ff7a11;
   color: #fff; }
+
+.user-integration .title {
+  padding-left: 15px;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #b2b2b2; }
+  .user-integration .title .ion-ios-star-outline {
+    color: #688ae2;
+    margin-right: 5px;
+    font-size: 25px;
+    position: relative;
+    top: 3px; }
+  .user-integration .title span {
+    color: #d7330d;
+    float: right;
+    margin-right: 15px; }
+
+.user-integration .integration-list {
+  position: absolute;
+  top: 70px;
+  bottom: 50px;
+  left: 15px;
+  right: 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  color: #ff7a11; }
+  .user-integration .integration-list h4 {
+    color: #ff7a11; }
+
+.user-integration .footer .tab-item {
+  max-width: 50%;
+  width: 50%; }
+
+.user-integration .footer .enroll-tab {
+  border-right: 1px solid #fff; }
+
+.user-integration .footer .tabs {
+  background-color: #ff7a11;
+  color: #fff; }
+
+.user-safe .list {
+  margin-bottom: 0px; }
+
+.user-safe .item-avatar > img:first-child {
+  max-width: 70px;
+  max-height: 70px; }
+
+.user-safe a.item.item-avatar {
+  padding-left: 110px;
+  min-height: 110px; }
+
+.user-safe .enroll-list {
+  border-top: 15px solid #ddd; }
+
+.user-safe .footer .tab-item {
+  max-width: 50%;
+  width: 50%; }
+
+.user-safe .footer .enroll-tab {
+  border-right: 1px solid #fff; }
+
+.user-safe .footer .tabs {
+  background-color: #ff7a11;
+  color: #fff; }
+
+.user-bind-phone .list .item {
+  margin-bottom: 15px; }
+
+.user-bind-phone .list .code {
+  float: left;
+  width: 70%; }
+
+.user-bind-phone .list .button-small {
+  height: 47px;
+  width: 30%;
+  background-color: #ff7a11;
+  color: #fff;
+  border-radius: 0;
+  position: relative;
+  top: -1px; }
+
+.user-bind-phone .tabs .button-block {
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: #ff7a11; }

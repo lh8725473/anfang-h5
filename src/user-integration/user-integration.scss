@@ -1,10 +1,11 @@
 .user-integration {
 
     .title{
-        margin-left: 15px;
+        padding-left: 15px;
         margin-top: 20px;
-        margin-bottom: 20px;
-        .ion-ios-paper-outline{
+        padding-bottom: 20px;
+        border-bottom: 1px solid #b2b2b2;
+        .ion-ios-star-outline{
             color: #688ae2;
             margin-right: 5px;
             font-size: 25px;
@@ -22,28 +23,17 @@
         position: absolute;
         top: 70px;
         bottom: 50px;
-        left: 0;
-        right: 0;
+        left: 15px;
+        right: 10px;
         overflow-y: auto;
         overflow-x: hidden;
-        .button.button-assertive{
-            width: 100px;
-            float: right;
-            background-color: #e93a3a;
-            margin-left: 10px;
+        color: #ff7a11;
+        h4{
+            color: #ff7a11;
         }
+        
 
 
-    }
-
-    .item-avatar > img:first-child{
-    	max-width: 70px;
-    	max-height: 70px;
-    }
-
-    a.item.item-avatar{
-    	padding-left: 110px;
-    	min-height: 110px;
     }
 
     .footer{

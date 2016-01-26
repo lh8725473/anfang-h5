@@ -1,3 +1,15 @@
 <div class="enroll" ng-controller="App.Enroll.Controller">
-	报名页面
+    <ion-content>
+        <div class="row header">
+          <div class="col">项目</div>
+          <div class="col">报名时间</div>
+          <div class="col">操作</div>
+        </div>
+        <div class="row data" ng-repeat="event in event_list">
+          <div class="col">{{event.name}}</div>
+          <div class="col">{{event.reg_start_time}}</div>
+          <div class="col"><button class="button button-small" ng-click="">去报名</button></div>
+        </div>
+    </ion-content>
+    <p class="tuanti">团体报名请在PC上登陆网站 <a href="http://www.anfang-beijing.com">http://www.anfang-beijing.com</a></p>
 </div>
