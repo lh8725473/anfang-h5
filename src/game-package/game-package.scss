@@ -27,9 +27,25 @@
 		position: relative;
 	}
 	
-	.checkbox{
-		background-color: #ff7a11;
+	.item-checkbox{
+		padding-top: 30px;
+		border: none;
 	}
+
+	.checkbox input, .checkbox-icon{
+		left: 30px;
+	}
+
+	.checkbox-icon:before{
+		border-radius: 0;
+		border-color: #ff7a11;
+	}
+	
+	.checkbox input:checked:before, .checkbox input:checked + .checkbox-icon:before{
+		background: #ff7a11;
+    	border-color: #ff7a11;
+	}
+
 	.tabs{
         .button-block{
             margin-top: 0;

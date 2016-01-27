@@ -14,6 +14,8 @@ angular.module('App.User', ['App.User.Me', 'App.User.Action', 'App.User.Enroll',
 
         // })
 
+        $scope.user = User.getUserProfile()
+
 
 
     }

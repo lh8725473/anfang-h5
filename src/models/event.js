@@ -3,26 +3,13 @@ angular.module('App.Models').factory('Event', [
     function(
         $resource
     ) {
-        return $resource('http://123.56.79.196' + '/api/v1/match/game/:id/:event', {}, {
-            getGameList: {
+        return $resource('http://123.56.79.196' + '/api/v1/match/event/:id/:declaration', {}, {
+            getEventDeclaration: {
                 method: "get",
                 params: {
-
-                },
-            isArray: true
-            },
-            getGameDetail: {
-                method: "get",
-                params: {
-                    id: ''
+                    id: '',
+                    declaration: 'declaration'
                 }
-            },
-            getEventList:{
-                method: "get",
-                params: {
-                    event: 'event'
-                },
-            isArray: true
             }
 
 

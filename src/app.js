@@ -27,6 +27,8 @@ var appModule = angular.module('ionicApp', [
     'App.GameDetail',
     'App.ProcessDetail',
     'App.Enroll',
+    'App.EventDeclaration',
+    'App.GamePerson',
     'App.GamePackage',
     'App.User'
 
@@ -91,8 +93,16 @@ appModule.config([
                 url: '/enroll/:enroll_id',
                 templateUrl: 'enroll/enroll.html'
             })
+            .state('event-declaration', {
+                url: '/event-declaration/:event_id',
+                templateUrl: 'event-declaration/event-declaration.html'
+            })
+            .state('game-person', {
+                url: '/game-person/:event_id',
+                templateUrl: 'game-person/game-person.html'
+            })
             .state('game-package', {
-                url: '/game-package/:package_id',
+                url: '/game-package/:event_id',
                 templateUrl: 'game-package/game-package.html'
             })
             .state('user', {

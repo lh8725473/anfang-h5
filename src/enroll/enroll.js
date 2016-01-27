@@ -13,5 +13,10 @@ angular.module('App.Enroll', []).controller('App.Enroll.Controller', [
             id: $state.params.enroll_id
         })
 
+        $scope.goEventDeclaration = function(event_id){
+        	$state.go('event-declaration', {
+                event_id: event_id
+            })
+        }
     }
 ]);

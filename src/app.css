@@ -62,18 +62,18 @@
 
 .carousel {
   width: 100%;
-  height: 200px; }
+  height: 150px; }
   .carousel .slider {
     height: 100%; }
   .carousel .slider-slide img {
     width: 100%;
     height: 100%; }
 
-.game-list.list {
+.game-list .list {
   position: absolute;
   left: 0;
   right: 0;
-  top: 250px;
+  top: 200px;
   bottom: 50px;
   overflow-y: auto;
   overflow-x: hidden; }
@@ -200,9 +200,6 @@
     border-radius: 0;
     width: 75px; }
 
-.enroll .scroll-content {
-  position: relative; }
-
 .enroll .tuanti {
   margin-top: 10px;
   padding-left: 10px; }
@@ -232,10 +229,100 @@
 .game-package .scroll-content {
   position: relative; }
 
-.game-package .checkbox {
-  background-color: #ff7a11; }
+.game-package .item-checkbox {
+  padding-top: 30px;
+  border: none; }
+
+.game-package .checkbox input, .game-package .checkbox-icon {
+  left: 30px; }
+
+.game-package .checkbox-icon:before {
+  border-radius: 0;
+  border-color: #ff7a11; }
+
+.game-package .checkbox input:checked:before, .game-package .checkbox input:checked + .checkbox-icon:before {
+  background: #ff7a11;
+  border-color: #ff7a11; }
 
 .game-package .tabs .button-block {
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: #ff7a11; }
+
+.event-declaration .header {
+  border-bottom: 1px solid #b2b2b2;
+  font-size: 16px;
+  height: 35px;
+  padding-left: 10px; }
+  .event-declaration .header span {
+    color: #ff7a11; }
+
+.event-declaration .contents {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 105px;
+  top: 50px;
+  padding-left: 10px;
+  padding-right: 10px; }
+
+.event-declaration .item-checkbox {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 50px;
+  border: none;
+  color: #ff7a11; }
+
+.event-declaration .checkbox-icon:before {
+  border-radius: 0;
+  border-color: #ff7a11; }
+
+.event-declaration .checkbox input:checked:before, .event-declaration .checkbox input:checked + .checkbox-icon:before {
+  background: #ff7a11;
+  border-color: #ff7a11; }
+
+.event-declaration .tabs .button-block {
+  border: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: #ff7a11; }
+
+.game-person .header {
+  border-bottom: 1px solid #b2b2b2;
+  font-size: 16px;
+  height: 35px;
+  padding-left: 10px; }
+  .game-person .header span {
+    color: #ff7a11; }
+
+.game-person .contents {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 105px;
+  top: 50px;
+  padding-left: 10px;
+  padding-right: 10px; }
+
+.game-person .item-checkbox {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 50px;
+  border: none;
+  color: #ff7a11; }
+
+.game-person .checkbox-icon:before {
+  border-radius: 0;
+  border-color: #ff7a11; }
+
+.game-person .checkbox input:checked:before, .game-person .checkbox input:checked + .checkbox-icon:before {
+  background: #ff7a11;
+  border-color: #ff7a11; }
+
+.game-person .tabs .button-block {
+  border: none;
   margin-top: 0;
   margin-bottom: 0;
   background-color: #ff7a11; }
@@ -305,7 +392,8 @@
 
 .user-me .footer .tab-item {
   max-width: 100%;
-  width: 100%; }
+  width: 100%;
+  font-size: 20px; }
 
 .user-me .footer .tabs {
   background-color: #ff7a11;

@@ -3,19 +3,26 @@ angular.module('App.Models').factory('User', [
     function(
         $resource
     ) {
-        return $resource('/api/v1/accounts', {}, {
-            getUser: {
+        return $resource('http://123.56.79.196' + '/api/v1/my/:action', {}, {
+            getUserProfile: {
                 method: "GET",
                 params: {
-
+                    action: 'profile'
                 }
             },
-            'delete': {
-                method: "DELETE",
+            getUserSign: {
+                method: "GET",
                 params: {
-                    action: 'delete',
-                    id: ''
-                }
+                    action: 'person_sign'
+                },
+            isArray: true
+            },
+            getUserFocus: {
+                method: "GET",
+                params: {
+                    action: 'focus_game'
+                },
+            isArray: true
             }
 
         })

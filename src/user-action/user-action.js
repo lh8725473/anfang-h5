@@ -7,7 +7,7 @@ angular.module('App.User.Action', []).controller('App.User.Action.Controller', [
     ) {
 
         //$scope.news = [1,2,3,2]
-        // $scope.user = User.getUser()
+        $scope.focus_games = User.getUserFocus()
 
         // $scope.user.$promise.then(function(user) {
         //     console.log('aa')
