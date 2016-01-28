@@ -76,7 +76,8 @@
   top: 200px;
   bottom: 50px;
   overflow-y: auto;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  webkit-overflow-scrolling: touch; }
 
 .game-list .search {
   width: 100%;
@@ -167,15 +168,20 @@
   bottom: 50px;
   left: 0;
   right: 0;
-  overflow-y: auto; }
+  overflow-y: auto;
+  overflow-x: hidden;
+  webkit-overflow-scrolling: touch; }
   .process-detail .text-process .game-text {
     padding-top: 5px;
     border-top: 1px solid #b2b2b2;
     border-bottom: 1px solid #b2b2b2; }
   .process-detail .text-process .game-process {
     margin-top: 10px; }
+  .process-detail .text-process .map img {
+    width: 90%; }
 
 .process-detail .tabs .button-block {
+  border: none;
   margin-top: 0;
   margin-bottom: 0;
   background-color: #ff7a11; }
@@ -577,3 +583,13 @@
   margin-top: 0;
   margin-bottom: 0;
   background-color: #ff7a11; }
+
+html, body {
+  height: 100%;
+  width: 100%; }
+
+.button:after {
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px; }

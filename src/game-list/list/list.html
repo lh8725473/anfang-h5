@@ -1,4 +1,4 @@
-<div class="list" ng-controller="App.GameList.List.Controller">
+<div class="list scroll-hack" ng-controller="App.GameList.List.Controller">
     <a class="item item-thumbnail-left" ng-repeat="game in game_list" ui-sref="game-detail({game_id:game.id})">
       <img ng-src="{{game.avatar}}">
       <h2>{{game.name}}</h2>

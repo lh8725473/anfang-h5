@@ -1,6 +1,6 @@
 <div class="process-detail" ng-controller="App.ProcessDetail.Controller">
-	<h3 class="title"><i class="icon ion-bookmark"></i><span class="orange title-text">全程马拉松</span></h3>
-	<div class="text-process">
+	<h3 class="title"><i class="icon ion-bookmark"></i><span class="orange title-text">{{game_detail.name}}</span></h3>
+	<div class="text-process scroll-hack">
 		<h3 class="orange">赛程介绍：</h3>
 		<div class="game-process" ng-repeat="event in event_list">
 			<h5 class="orange">{{event.name}}</h5>

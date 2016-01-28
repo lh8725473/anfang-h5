@@ -13,6 +13,7 @@ angular.module('App.Loading', []).controller('App.Loading.Controller', [
             $timeout(function() {
                 $scope.loading = false;
             }, 2000)
+            //debugger
         });
 
         $rootScope.$on('$stateChangeSuccess',function(event, toState, toParams, fromState, fromParams){
@@ -35,8 +36,7 @@ angular.module('App.Loading', []).controller('App.Loading.Controller', [
                 default:
                     window_title = '赛事'
             }
-
-
+            
             var $body = $('body')
             document.title = window_title
             // hack在微信等webview中无法修改document.title的情况
