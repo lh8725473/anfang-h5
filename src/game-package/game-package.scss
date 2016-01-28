@@ -33,7 +33,7 @@
 	}
 
 	.checkbox input, .checkbox-icon{
-		left: 30px;
+		left: 33%;
 	}
 
 	.checkbox-icon:before{
@@ -47,6 +47,7 @@
 	}
 
 	.tabs{
+		background-size: 100% 0;
         .button-block{
             margin-top: 0;
             margin-bottom: 0;

@@ -18,6 +18,7 @@
 @import "user-integration/user-integration.scss";
 @import "user-safe/user-safe.scss";
 @import "user-bind-phone/user-bind-phone.scss";
+@import "user-bind-email/user-bind-email.scss";
 
 html, body{
 	height: 100%;
@@ -29,4 +30,8 @@ html, body{
     right: 0px;
     bottom: 0px;
     left: 0px;
+}
+
+.button-block{
+	border-radius: 0;
 }

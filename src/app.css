@@ -118,7 +118,9 @@
   bottom: 50px;
   left: 0;
   right: 0;
-  overflow-y: auto; }
+  overflow-y: auto;
+  overflow-x: hidden;
+  webkit-overflow-scrolling: touch; }
   .game-detail .text-process .orange {
     color: #ff7a11; }
   .game-detail .text-process .game-text {
@@ -180,11 +182,14 @@
   .process-detail .text-process .map img {
     width: 90%; }
 
-.process-detail .tabs .button-block {
-  border: none;
-  margin-top: 0;
-  margin-bottom: 0;
-  background-color: #ff7a11; }
+.process-detail .tabs {
+  background-size: 100% 0; }
+  .process-detail .tabs .button-block {
+    border-radius: 0;
+    border: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: #ff7a11; }
 
 .enroll .header {
   border-bottom: 1px solid #b2b2b2;
@@ -240,7 +245,7 @@
   border: none; }
 
 .game-package .checkbox input, .game-package .checkbox-icon {
-  left: 30px; }
+  left: 33%; }
 
 .game-package .checkbox-icon:before {
   border-radius: 0;
@@ -250,10 +255,12 @@
   background: #ff7a11;
   border-color: #ff7a11; }
 
-.game-package .tabs .button-block {
-  margin-top: 0;
-  margin-bottom: 0;
-  background-color: #ff7a11; }
+.game-package .tabs {
+  background-size: 100% 0; }
+  .game-package .tabs .button-block {
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: #ff7a11; }
 
 .event-declaration .header {
   border-bottom: 1px solid #b2b2b2;
@@ -288,11 +295,13 @@
   background: #ff7a11;
   border-color: #ff7a11; }
 
-.event-declaration .tabs .button-block {
-  border: none;
-  margin-top: 0;
-  margin-bottom: 0;
-  background-color: #ff7a11; }
+.event-declaration .tabs {
+  background-size: 100% 0; }
+  .event-declaration .tabs .button-block {
+    border: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: #ff7a11; }
 
 .game-person .header {
   border-bottom: 1px solid #b2b2b2;
@@ -327,11 +336,13 @@
   background: #ff7a11;
   border-color: #ff7a11; }
 
-.game-person .tabs .button-block {
-  border: none;
-  margin-top: 0;
-  margin-bottom: 0;
-  background-color: #ff7a11; }
+.game-person .tabs {
+  background-size: 100% 0; }
+  .game-person .tabs .button-block {
+    border: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: #ff7a11; }
 
 .user .list {
   margin-bottom: 0px; }
@@ -426,7 +437,8 @@
   left: 0;
   right: 0;
   overflow-y: auto;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  webkit-overflow-scrolling: touch; }
   .user-action .action-list .button.button-assertive {
     width: 100px;
     float: right;
@@ -473,12 +485,15 @@
   left: 0;
   right: 0;
   overflow-y: auto;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  webkit-overflow-scrolling: touch; }
   .user-enroll .enroll-list .button.button-assertive {
     width: 100px;
-    float: right;
-    background-color: #e93a3a;
-    margin-left: 10px; }
+    background-color: #e93a3a; }
+
+.user-enroll .item-thumbnail-left > img:first-child {
+  max-width: 90px;
+  max-height: 90px; }
 
 .user-enroll .item-avatar > img:first-child {
   max-width: 70px;
@@ -584,6 +599,27 @@
   margin-bottom: 0;
   background-color: #ff7a11; }
 
+.user-bind-email .list .item {
+  margin-bottom: 15px; }
+
+.user-bind-email .list .code {
+  float: left;
+  width: 70%; }
+
+.user-bind-email .list .button-small {
+  height: 47px;
+  width: 30%;
+  background-color: #ff7a11;
+  color: #fff;
+  border-radius: 0;
+  position: relative;
+  top: -1px; }
+
+.user-bind-email .tabs .button-block {
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: #ff7a11; }
+
 html, body {
   height: 100%;
   width: 100%; }
@@ -593,3 +629,6 @@ html, body {
   right: 0px;
   bottom: 0px;
   left: 0px; }
+
+.button-block {
+  border-radius: 0; }

@@ -53,7 +53,9 @@
 	}
 
 	.tabs{
+		background-size: 100% 0;
         .button-block{
+        	border-radius: 0;
         	border: none;
             margin-top: 0;
             margin-bottom: 0;
