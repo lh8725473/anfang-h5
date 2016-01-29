@@ -45,8 +45,8 @@ angular.module('App.Loading', []).controller('App.Loading.Controller', [
                 case "user":
                     window_title = '个人中心'
                     break
-                case "enroll":
-                    window_title = '赛事报名'
+                case "user-me":
+                    window_title = '个人详细资料'
                     break
                 default:
                     window_title = '赛事'
