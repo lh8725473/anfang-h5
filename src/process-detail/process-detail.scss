@@ -32,6 +32,8 @@
 		left: 0;
 		right: 0;
 		overflow-y: auto;
+		overflow-x: hidden;
+		webkit-overflow-scrolling: touch;
 		.game-text{
 			padding-top: 5px;
 			border-top: 1px solid #b2b2b2;
@@ -42,10 +44,19 @@
 			margin-top: 10px;
 		}
 
+		.map{
+			img{
+				width: 90%;
+			}
+		}
+
 	}
 
 	.tabs{
+		background-size: 100% 0;
         .button-block{
+        	border-radius: 0;
+        	border: none;
             margin-top: 0;
             margin-bottom: 0;
             background-color: #ff7a11;

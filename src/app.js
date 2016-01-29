@@ -133,6 +133,10 @@ appModule.config([
                 url: '/user-bind-phone',
                 templateUrl: 'user-bind-phone/user-bind-phone.html'
             })
+            .state('user-bind-email', {
+                url: '/user-bind-email',
+                templateUrl: 'user-bind-email/user-bind-email.html'
+            })
             
             // .state('links.linkRecord', {
             //     url: '/linkRecord',

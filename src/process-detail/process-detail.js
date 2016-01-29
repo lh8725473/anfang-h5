@@ -17,6 +17,10 @@ angular.module('App.ProcessDetail', []).controller('App.ProcessDetail.Controller
 
         // })
 
+        $scope.game_detail = Game.getGameDetail({
+            id: $state.params.process_id
+        })
+
         $scope.event_list = Game.getEventList({
             id: $state.params.process_id
         })

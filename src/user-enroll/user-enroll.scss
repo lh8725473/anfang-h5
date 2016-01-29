@@ -26,14 +26,20 @@
         right: 0;
         overflow-y: auto;
         overflow-x: hidden;
+        webkit-overflow-scrolling: touch;
         .button.button-assertive{
             width: 100px;
-            float: right;
+            //float: right;
             background-color: #e93a3a;
-            margin-left: 10px;
+            //margin-left: 10px;
         }
 
 
+    }
+
+    .item-thumbnail-left > img:first-child{
+        max-width: 90px;
+        max-height: 90px;
     }
 
     .item-avatar > img:first-child{
