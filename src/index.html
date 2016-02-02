@@ -16,15 +16,16 @@
 	<link rel="stylesheet" type="text/css" href="app.css">
 	<!-- endbuild -->
 </head>
-<body>
+<body ng-controller="App.Loading.Controller">
     <!-- loading div -->
-    <div class="" ng-include="'loading/loading.html'" ng-controller='App.Loading.Controller'></div>
+    <div class="" ng-include="'loading/loading.html'"></div>
 	
 	<!-- header div -->
     <!-- <div class="header" ng-include="'header/header.html'"></div> -->
 
     <!-- router div -->
-    <div class="router-div" ui-view></div>
+    <ion-nav-view></ion-nav-view>
+    <!-- <div ng-class="slide" class="router-div" ui-view ></div> -->
 
 
 	<!-- footer div -->
@@ -68,6 +69,7 @@
 	<script type="text/javascript" src="event-declaration/event-declaration.js"></script>
 	<script type="text/javascript" src="game-person/game-person.js"></script>
 	<script type="text/javascript" src="game-package/game-package.js"></script>
+	<script type="text/javascript" src="game-person-sign-detail/game-person-sign-detail.js"></script>
 
 	<!-- user -->
 	<script type="text/javascript" src="user-bind-email/user-bind-email.js"></script>

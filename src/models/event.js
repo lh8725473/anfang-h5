@@ -26,6 +26,29 @@ angular.module('App.Models').factory('Event', [
                     id: '',
                     action: 'person_sign'
                 }
+            },
+            postPersonSignProduct: {
+                method: "post",
+                params: {
+                    id: '',
+                    action: 'product'
+                }
+            },
+            getOrderConfirm: {
+                method: "get",
+                params: {
+                    id: '',
+                    action: 'order',
+                    form: 'confirm'
+                }
+            },
+            postOrderConfirm: {
+                method: "post",
+                params: {
+                    id: 0,
+                    action: 'order',
+                    form: 'confirm'
+                }
             }
 
 

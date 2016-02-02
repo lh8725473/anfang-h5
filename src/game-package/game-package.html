@@ -5,13 +5,13 @@
           <div class="col">套餐</div>
           <div class="col">详情</div>
         </div>
-        <div class="row data" ng-repeat="data in product_list">
-          <div class="col"><ion-checkbox ng-model="checkbox"></ion-checkbox></div>
-          <div class="col">{{data.name}}</div>
-          <div class="col">{{data.simple}}</div>
+        <div class="row data" ng-repeat="product in product_list">
+          <div class="col"><ion-checkbox ng-click="changeCheckbox(product)" ng-model="product.checkbox"></ion-checkbox></div>
+          <div class="col">{{product.name}}</div>
+          <div class="col">{{product.simple}}</div>
         </div>
     </ion-content>
     <div class="tabs">
-      <button class="button button-block button-positive">下一步</button>
+      <button class="button button-block button-positive" ng-click="postPersonSignProduct()">下一步</button>
     </div>
 </div>

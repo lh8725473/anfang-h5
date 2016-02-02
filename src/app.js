@@ -30,6 +30,7 @@ var appModule = angular.module('ionicApp', [
     'App.EventDeclaration',
     'App.GamePerson',
     'App.GamePackage',
+    'App.GamePersonSignDetail',
     'App.User'
 
 ]);
@@ -50,13 +51,12 @@ appModule.factory('httpInterceptor', [
             },
 
             response: function(response) {
-                
                 return response
             },
             responseError: function(rejection) {
                 // Handle Request error
-                if (rejection.status == 401) { //401 token 无效
-
+                if(rejection.status === 403){
+                    window.location.href = 'http://run.niren.org/wechat/oauth2?next_url=http://www.niren.org/wap/index.html'
                 }
                 return $q.reject(rejection)
             }
@@ -102,8 +102,12 @@ appModule.config([
                 templateUrl: 'game-person/game-person.html'
             })
             .state('game-package', {
-                url: '/game-package/:event_id',
+                url: '/game-package/:person_sign_id',
                 templateUrl: 'game-package/game-package.html'
+            })
+            .state('game-person-sign-detail', {
+                url: '/game-person-sign-detail/:person_sign_id',
+                templateUrl: 'game-person-sign-detail/game-person-sign-detail.html'
             })
             .state('user', {
                 url: '/user',

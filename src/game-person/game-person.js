@@ -24,20 +24,20 @@ angular.module('App.GamePerson', []).controller('App.GamePerson.Controller', [
         })
 
         $scope.questions.$promise.then(function(questions) {
-            questions.forEach(function(question){
+            questions.forEach(function(question) {
                 question.html = $sce.trustAsHtml(question.field)
             })
         })
 
-        $scope.trustAsHtml = function(string){
+        $scope.trustAsHtml = function(string) {
             return $sce.trustAsHtml(string)
         }
 
-        $scope.trustAsHtmlaaa = function(text){
+        $scope.trustAsHtmlaaa = function(text) {
             return $sce.trustAsHtml(text)
         }
 
-        $scope.goGamePackage = function(){
+        $scope.goGamePackage = function() {
             var data = {
 
             }
@@ -45,21 +45,23 @@ angular.module('App.GamePerson', []).controller('App.GamePerson.Controller', [
             for (var i = 0; i < $scope.questions.length - 1; i++) {
                 var question = $scope.questions[i]
                 var val = $('#id_' + question.name).val()
-                // if ( val=== ''){
-                //     alert('请完善所有资料')
-                //     break
-                // }
+                    // if ( val=== ''){
+                    //     alert('请完善所有资料')
+                    //     break
+                    // }
 
                 data[question.name] = val
             }
-           
-            
+
+
             Event.postPersonSignForm({
                 id: $state.params.event_id
-            },data).$promise.then(function(questions) {
+            }, data).$promise.then(function(reps) {
                 $state.go('game-package', {
-                    event_id: $state.params.event_id
+                    person_sign_id: reps.person_sign_id
                 })
+            }, function(error) {
+                debugger
             });
 
         }

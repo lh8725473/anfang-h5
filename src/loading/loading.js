@@ -16,6 +16,12 @@ angular.module('App.Loading', []).controller('App.Loading.Controller', [
             //debugger
         });
 
+        $scope.slide = '';
+  
+        $rootScope.$on('$stateChangeStart', function(){
+            $scope.slide = $scope.slide || 'slide-left'
+        });
+
         $rootScope.$on('$stateChangeSuccess',function(event, toState, toParams, fromState, fromParams){
             event.preventDefault();
             var state_name = toState.name

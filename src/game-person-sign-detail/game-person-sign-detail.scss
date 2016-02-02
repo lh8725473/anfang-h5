@@ -1,0 +1,31 @@
+.game-person-sign-detail {
+
+	.list{
+		position: absolute;
+		top: 0px;
+		bottom: 50px;
+		left: 0;
+		right: 0;
+		overflow-x:hidden;
+		overflow-y:auto;
+	}
+	.header{
+		border-bottom: 1px solid #b2b2b2;
+		font-size: 16px;
+    	height: 40px;
+    	padding-left: 10px;
+    	span{
+    		color: #ff7a11;
+    	}
+	}
+
+	.tabs{
+		background-size: 100% 0;
+        .button-block{
+        	border: none;
+            margin-top: 0;
+            margin-bottom: 0;
+            background-color: #ff7a11;
+        }
+    }   
+}
