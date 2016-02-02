@@ -1,8 +1,36 @@
 .game-person {
+
+	.list{
+		position: absolute;
+		top: 50px;
+		bottom: 50px;
+		left: 0;
+		right: 0;
+		overflow-x:hidden;
+		overflow-y:auto;
+		.element{
+			padding: 10px 15px;
+			label{
+				color: #ff7a11;
+			}
+			div{
+				margin-top: 5px;
+			}
+			input{
+				width: 100%;
+				border: 1px solid #ff7a11;
+			}
+			select{
+				width: 100%;
+				border: 1px solid #ff7a11;
+				height: 34px;
+			}
+		}
+	}
 	.header{
 		border-bottom: 1px solid #b2b2b2;
 		font-size: 16px;
-    	height: 35px;
+    	height: 40px;
     	padding-left: 10px;
     	span{
     		color: #ff7a11;
@@ -35,6 +63,13 @@
 	.checkbox input:checked:before, .checkbox input:checked + .checkbox-icon:before{
 		background: #ff7a11;
     	border-color: #ff7a11;
+	}
+
+	.item{
+		padding-right: 16px;
+		select{
+			width: 100%;
+		}
 	}
 	.tabs{
 		background-size: 100% 0;

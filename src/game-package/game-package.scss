@@ -13,6 +13,9 @@
 		border-bottom: 1px solid #b2b2b2;
 		.col{
 			line-height: 47px;
+			overflow: hidden;
+    		white-space: nowrap;
+    		text-overflow: ellipsis;
 		}
 		.button-small{
 			margin-top: 10px;

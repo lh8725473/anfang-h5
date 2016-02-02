@@ -3,7 +3,7 @@ angular.module('App.Models').factory('User', [
     function(
         $resource
     ) {
-        return $resource('http://123.56.79.196' + '/api/v1/my/:action', {}, {
+        return $resource('http://www.niren.org' + '/api/v1/my/:action', {}, {
             getUserProfile: {
                 method: "GET",
                 params: {
@@ -15,14 +15,14 @@ angular.module('App.Models').factory('User', [
                 params: {
                     action: 'person_sign'
                 },
-            isArray: true
+                isArray: true
             },
             getUserFocus: {
                 method: "GET",
                 params: {
                     action: 'focus_game'
                 },
-            isArray: true
+                isArray: true
             }
 
         })

@@ -3,12 +3,28 @@ angular.module('App.Models').factory('Event', [
     function(
         $resource
     ) {
-        return $resource('http://123.56.79.196' + '/api/v1/match/event/:id/:declaration', {}, {
+        return $resource('http://www.niren.org' + '/api/v1/match/event/:id/:action/:form', {}, {
             getEventDeclaration: {
                 method: "get",
                 params: {
                     id: '',
-                    declaration: 'declaration'
+                    action: 'declaration'
+                }
+            },
+            getPersonSignForm: {
+                method: "get",
+                params: {
+                    id: '',
+                    action: 'person_sign',
+                    form: 'form'
+                },
+                isArray: true
+            },
+            postPersonSignForm: {
+                method: "post",
+                params: {
+                    id: '',
+                    action: 'person_sign'
                 }
             }
 

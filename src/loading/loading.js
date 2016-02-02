@@ -48,14 +48,36 @@ angular.module('App.Loading', []).controller('App.Loading.Controller', [
                 case "user-me":
                     window_title = '个人详细资料'
                     break
+                case "user-enroll":
+                    window_title = '我的报名'
+                    break
+                case "user-action":
+                    window_title = '关注赛事'
+                    break
+                case "user-integration":
+                    window_title = '我的积分'
+                    break
+                case "user-safe":
+                    window_title = '账号安全'
+                    break
+                case "user-bind-phone":
+                    window_title = '绑定手机'
+                    break
+                case "user-bind-email":
+                    window_title = '绑定邮箱'
+                    break            
+                case "user-me":
+                    window_title = '个人详细资料'
+                    break    
+
                 default:
                     window_title = '赛事'
             }
             
             var $body = $('body')
             document.title = window_title
-            hack在微信等webview中无法修改document.title的情况
-            var $iframe = $('<iframe src="./3123.png"></iframe>').on('load', function() {
+            //hack在微信等webview中无法修改document.title的情况
+            var $iframe = $('<iframe src="img/loading.gif"></iframe>').on('load', function() {
               setTimeout(function() {
                 $iframe.off('load').remove()
               }, 0)

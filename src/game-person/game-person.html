@@ -1,21 +1,19 @@
 <div class="game-person" ng-controller="App.GamePerson.Controller">
     <h5 class="header"><span>请填写以下内容来完善你的报名信息(*为必填项)</span></h5>
 	<div class="list scroll-hack">
-	  <label class="item item-input item-stacked-label">
-	    <span class="input-label">选手姓名</span>
-	    <input type="text" placeholder="选手姓名">
-	  </label>
-	  <label class="item item-input item-stacked-label">
-	    <span class="input-label">选手姓名</span>
-	    <input type="text" placeholder="选手姓名">
-	  </label>
-	  <label class="item item-input item-stacked-label">
-	    <span class="input-label">选手姓名</span>
-	    <input type="text" placeholder="选手姓名">
-	  </label>
+		<div compile ng-bind-html="trustAsHtmlaaa(question)"></div>
+		<div class="element" ng-repeat="question in questions">
+			<label>{{question.label}}</label>
+			<div compile ng-bind-html="question.html"></div>
+		</div>
+	  <!-- <label class="item item-stacked-label" ng-repeat="element in person_sign_form">
+	    <span class="input-label">{{element.label}}</span>
+	    <div ng-bind-html="trustAsHtml(element)"></div>
+	  </label> -->
 	</div>
     <div class="tabs">
         <button class="button button-block button-positive" ng-click="goGamePackage()">下一步</button>
     </div>
+
 
 </div>

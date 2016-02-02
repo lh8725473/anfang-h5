@@ -229,7 +229,10 @@
   margin-top: 0;
   border-bottom: 1px solid #b2b2b2; }
   .game-package .data .col {
-    line-height: 47px; }
+    line-height: 47px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; }
   .game-package .data .button-small {
     margin-top: 10px;
     background-color: #ff7a11;
@@ -303,10 +306,32 @@
     margin-bottom: 0;
     background-color: #ff7a11; }
 
+.game-person .list {
+  position: absolute;
+  top: 50px;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  overflow-x: hidden;
+  overflow-y: auto; }
+  .game-person .list .element {
+    padding: 10px 15px; }
+    .game-person .list .element label {
+      color: #ff7a11; }
+    .game-person .list .element div {
+      margin-top: 5px; }
+    .game-person .list .element input {
+      width: 100%;
+      border: 1px solid #ff7a11; }
+    .game-person .list .element select {
+      width: 100%;
+      border: 1px solid #ff7a11;
+      height: 34px; }
+
 .game-person .header {
   border-bottom: 1px solid #b2b2b2;
   font-size: 16px;
-  height: 35px;
+  height: 40px;
   padding-left: 10px; }
   .game-person .header span {
     color: #ff7a11; }
@@ -335,6 +360,11 @@
 .game-person .checkbox input:checked:before, .game-person .checkbox input:checked + .checkbox-icon:before {
   background: #ff7a11;
   border-color: #ff7a11; }
+
+.game-person .item {
+  padding-right: 16px; }
+  .game-person .item select {
+    width: 100%; }
 
 .game-person .tabs {
   background-size: 100% 0; }

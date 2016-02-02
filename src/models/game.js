@@ -3,13 +3,13 @@ angular.module('App.Models').factory('Game', [
     function(
         $resource
     ) {
-        return $resource('http://123.56.79.196' + '/api/v1/match/game/:id/:event', {}, {
+        return $resource('http://www.niren.org' + '/api/v1/match/game/:id/:event', {}, {
             getGameList: {
                 method: "get",
                 params: {
 
                 },
-            isArray: true
+                isArray: true
             },
             getGameDetail: {
                 method: "get",
@@ -22,7 +22,7 @@ angular.module('App.Models').factory('Game', [
                 params: {
                     event: 'event'
                 },
-            isArray: true
+                isArray: true
             }
 
         })

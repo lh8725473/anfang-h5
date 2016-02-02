@@ -5,10 +5,10 @@
           <div class="col">套餐</div>
           <div class="col">详情</div>
         </div>
-        <div class="row data" ng-repeat="data in data">
+        <div class="row data" ng-repeat="data in product_list">
           <div class="col"><ion-checkbox ng-model="checkbox"></ion-checkbox></div>
-          <div class="col">{{data.code}}</div>
-          <div class="col">{{data.code}}</div>
+          <div class="col">{{data.name}}</div>
+          <div class="col">{{data.simple}}</div>
         </div>
     </ion-content>
     <div class="tabs">
