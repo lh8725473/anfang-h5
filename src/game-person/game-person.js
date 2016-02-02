@@ -19,8 +19,6 @@ angular.module('App.GamePerson', []).controller('App.GamePerson.Controller', [
         //     return $sce.trustAsHtml(contents)
         // }
 
-        $scope.testSting = ['<input id="textname" maxlength="100" name="textname" ng-model="textname" type="text" />']
-
         $scope.questions = Event.getPersonSignForm({
             id: $state.params.event_id
         })
@@ -54,16 +52,17 @@ angular.module('App.GamePerson', []).controller('App.GamePerson.Controller', [
 
                 data[question.name] = val
             }
-            console.log(data)
+           
             
             Event.postPersonSignForm({
                 id: $state.params.event_id
-            },{data}).$promise.then(function(questions) {
+            },data).$promise.then(function(questions) {
                 $state.go('game-package', {
                     event_id: $state.params.event_id
                 })
-            })
-            
+            });
+
         }
+
     }
 ]);
