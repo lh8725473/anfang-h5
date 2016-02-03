@@ -131,15 +131,16 @@
     margin-top: 10px; }
 
 .game-detail .tabs {
+  color: #fff;
   cursor: pointer;
-  background-color: #fff; }
+  background-color: #ff7a11; }
 
 .game-detail .button.icon-right:before {
   font-size: 15px; }
 
 .game-detail .button.button-calm {
-  background-color: #fff;
-  color: #ff7a11; }
+  background-color: #ff7a11;
+  color: #fff; }
 
 .process-detail .orange {
   color: #ff7a11; }
@@ -378,11 +379,15 @@
 .game-person-sign-detail .list {
   position: absolute;
   top: 0px;
-  bottom: 50px;
+  bottom: 80px;
   left: 0;
   right: 0;
   overflow-x: hidden;
   overflow-y: auto; }
+  .game-person-sign-detail .list p {
+    height: 35px;
+    font-size: 15px;
+    padding: 0 15px; }
 
 .game-person-sign-detail .header {
   border-bottom: 1px solid #b2b2b2;
@@ -391,6 +396,19 @@
   padding-left: 10px; }
   .game-person-sign-detail .header span {
     color: #ff7a11; }
+
+.game-person-sign-detail .price {
+  height: 30px;
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 18px;
+  color: #ff7a11; }
+  .game-person-sign-detail .price span {
+    float: right; }
 
 .game-person-sign-detail .tabs {
   background-size: 100% 0; }
@@ -688,3 +706,9 @@ html, body {
 
 .button-block {
   border-radius: 0; }
+
+.ion-chevron-right {
+  color: #d0d0d0; }
+
+.tab-item {
+  font-size: 17px; }

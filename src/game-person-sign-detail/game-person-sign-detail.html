@@ -2,9 +2,15 @@
     
 	<div class="list scroll-hack">
 		<h5 class="header"><span>基本信息</span></h5>
+		<p>报名者姓名：{{getOrderConfirm.name}}</p>
+		<p>报名者手机：{{getOrderConfirm.cellphone}}</p>
+		<p>赛事名称：{{getOrderConfirm.game_name}}</p>
+		<p>赛程名称：{{getOrderConfirm.event_name}}</p>
+		<p>套餐名称：{{getOrderConfirm.product_name}}</p>
 	</div>
+	<div class="price">总费用：<span>{{getOrderConfirm.total_fee}} 元</span></div>
     <div class="tabs">
-        <button class="button button-block button-positive" ng-click="postOrderConfirm()">下一步</button>
+        <button class="button button-block button-positive" ng-click="postOrderConfirm()">确认支付</button>
     </div>
 
 
