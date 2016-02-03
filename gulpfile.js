@@ -23,6 +23,7 @@
 	var rename = require("gulp-rename");
 	var gulpIgnore = require('gulp-ignore');
 	var clean = require('gulp-clean');
+	var revCollector = require('gulp-rev-collector');
 
 	//编译scss
 	gulp.task('sass', function() {
@@ -61,51 +62,68 @@
 			}))
 			.pipe(gulp.dest('build'));
 	});
-	
+
 	//合并打包压缩js css 
 	gulp.task('useref', function() {
 		return gulp.src('src/index.html')
 			.pipe(useref())
 			.pipe(gulpif('*.js', uglify()))
 			.pipe(gulpif('*.css', minifyCss()))
-			.pipe(rev())
-			.pipe(revReplace())
-			.pipe(gulp.dest('build'));
+			// .pipe(rev())
+			// .pipe(revReplace())
+			.pipe(gulp.dest('tmp'));
 	});
 
-	//重命名index.thml
-	gulp.task('rename', function(){
-		return gulp.src("build/*.html")
-		.pipe(rename("index.html"))
-		.pipe(gulp.dest("build"));
+	//加入md5 replaceMD5
+	gulp.task('rev', function() {
+		return gulp.src(['tmp/js/*.js', 'tmp/css/*.css'], {base: 'tmp'})
+			.pipe(rev())
+			.pipe(gulp.dest("build"))
+			.pipe(rev.manifest()) //- 生成一个rev-manifest.json                            
+			.pipe(gulp.dest('tmp/rev'))
 	})
 
-	//clean多余html
-	gulp.task('cleanhtml', function(){
-		return gulp.src('build/*.html', {read: false})
-			.pipe(gulpIgnore.exclude('index.html'))
-			.pipe(clean());
-	})
+	//替换index.html 引用路径
+	gulp.task('revCollector', function() {
+		gulp.src(['tmp/rev/*.json', 'build/index.html']) //- 读取 rev-manifest.json 文件以及需要进行css名替换的文件
+			.pipe(revCollector()) //- 执行文件内css名的替换
+			.pipe(gulp.dest('build/')); //- 替换后的文件输出的目录
+	});
 
 	//copy文件
-	gulp.task('copy', ['copyImg', 'copySvg'])
+	gulp.task('copy', ['copyImg', 'copySvg', 'copyhtml'])
 
-	gulp.task('copyImg', function(){
+	gulp.task('copyImg', function() {
 		return gulp.src('src/img/*.*')
 			.pipe(gulp.dest("build/img"));
 	})
 
-	gulp.task('copySvg', function(){
+	gulp.task('copySvg', function() {
 		return gulp.src('bower_components/ionic/release/fonts/*')
 			.pipe(gulp.dest("build/fonts"));
 	})
 
-	//clean发布目录
-	gulp.task('clean', function () {
-		return gulp.src('build/', {read: false})
+	gulp.task('copyhtml', function() {
+		return gulp.src('tmp/*.html')
+			.pipe(gulp.dest("build/"));
+	})
+
+	//clean发布目录和临时目录
+	gulp.task('clean', function() {
+		return gulp.src(['build/', 'tmp'], {
+				read: false
+			})
 			.pipe(clean());
 	})
-	
+
+	//clean临时目录
+	gulp.task('cleanTmp', function() {
+		return gulp.src(['tmp'], {
+				read: false
+			})
+			.pipe(clean());
+	})
+
 	//发布项目
-	gulp.task('build', gulpsync.sync(['clean', 'copy', 'sass', 'useref', 'rename', 'cleanhtml', 'inlineAngularTemplates']))
+	gulp.task('build', gulpsync.sync(['clean', 'sass', 'useref', 'copy', 'rev', 'revCollector', 'inlineAngularTemplates', 'cleanTmp']))
 })();

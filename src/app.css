@@ -708,7 +708,9 @@ html, body {
   border-radius: 0; }
 
 .ion-chevron-right {
-  color: #d0d0d0; }
+  color: #d0d0d0;
+  font-size: 16px !important; }
 
-.tab-item {
-  font-size: 17px; }
+.tabs-icon-left.tabs .tab-item, .tabs-icon-left > .tabs .tab-item, .tabs-icon-right.tabs .tab-item, .tabs-icon-right > .tabs .tab-item {
+  font-size: 16px;
+  opacity: 1; }

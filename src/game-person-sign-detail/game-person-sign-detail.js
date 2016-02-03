@@ -40,7 +40,7 @@ angular.module('App.GamePersonSignDetail', []).controller('App.GamePersonSignDet
 
         $.post(
             config.API_ROOT + '/wechat/jssdk/signature', {
-                url: config.API_ROOT + '/wap/index.html' //此URL是支付页面的URL
+                url: config.API_ROOT + '/wap/index.html#/game-person-sign-detail/' //此URL是支付页面的URL
             },
             function(resp) {
                 defaultConf = $.extend(defaultConf, resp);
