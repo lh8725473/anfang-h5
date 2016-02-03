@@ -3,7 +3,7 @@ angular.module('App.Models').factory('User', [
     function(
         $resource
     ) {
-        return $resource('http://www.niren.org' + '/api/v1/my/:action', {}, {
+        return $resource(config.API_ROOT + '/api/v1/my/:action', {}, {
             getUserProfile: {
                 method: "GET",
                 params: {

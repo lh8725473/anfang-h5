@@ -21,7 +21,7 @@ angular.module('App.GamePersonSignDetail', []).controller('App.GamePersonSignDet
             }).$promise.then(function(reps) {
 
                 $.get(
-                    'http://www.niren.org/wechat/pay/get_bridge_params', {},
+                    config.API_ROOT + '/wechat/pay/get_bridge_params', {},
                     function(resp) {
                         console.log(resp);
                         payAction(resp);
@@ -39,8 +39,8 @@ angular.module('App.GamePersonSignDetail', []).controller('App.GamePersonSignDet
         };
 
         $.post(
-            'http://www.niren.org/wechat/jssdk/signature', {
-                url: 'http://run.niren.org/wap/order.html' //此URL是支付页面的URL
+            config.API_ROOT + '/wechat/jssdk/signature', {
+                url: config.API_ROOT + '/wap/index.html' //此URL是支付页面的URL
             },
             function(resp) {
                 defaultConf = $.extend(defaultConf, resp);
