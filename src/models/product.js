@@ -3,7 +3,7 @@ angular.module('App.Models').factory('Product', [
     function(
         $resource
     ) {
-        return $resource('http://www.niren.org' + '/api/v1/product', {}, {
+        return $resource(config.API_ROOT + '/api/v1/product', {}, {
             getProductLsit: {
                 method: "GET",
                 params: {

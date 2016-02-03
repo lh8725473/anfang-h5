@@ -3,7 +3,7 @@ angular.module('App.Models').factory('Game', [
     function(
         $resource
     ) {
-        return $resource('http://www.niren.org' + '/api/v1/match/game/:id/:event', {}, {
+        return $resource(config.API_ROOT + '/api/v1/match/game/:id/:event', {}, {
             getGameList: {
                 method: "get",
                 params: {

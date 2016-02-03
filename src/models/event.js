@@ -3,7 +3,7 @@ angular.module('App.Models').factory('Event', [
     function(
         $resource
     ) {
-        return $resource('http://www.niren.org' + '/api/v1/match/event/:id/:action/:form', {}, {
+        return $resource(config.API_ROOT + '/api/v1/match/event/:id/:action/:form', {}, {
             getEventDeclaration: {
                 method: "get",
                 params: {
