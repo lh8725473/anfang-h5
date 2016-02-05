@@ -85,11 +85,16 @@
   .game-list .search .item-select {
     float: left;
     height: 50px;
-    width: 30%;
+    width: 33%;
     border: none; }
     .game-list .search .item-select select {
       width: 100%;
-      max-width: 100%; }
+      max-width: 100%;
+      padding-right: 30px; }
+  .game-list .search .ion-ios-search {
+    width: 70px;
+    margin-left: 30px;
+    margin-top: 10px; }
 
 .game-list .button.button-assertive {
   background-color: #ff7a11; }

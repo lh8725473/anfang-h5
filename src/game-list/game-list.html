@@ -2,26 +2,18 @@
 	<div ng-include="'game-list/carousel/carousel.html'"></div>
 	<div class="search">
 		<label class="item item-input item-select">
-		    <select>
-		      <option selected>日期</option>
-		      <option>一月</option>
-		      <option>二月</option>
+		    <select ng-model="month">
+		      <option selected value="">日期全部</option>
+		      <option ng-repeat="month in month_list" value="{{month.key}}">{{month.value}}</option>
 		    </select>
 		 </label>
 		 <label class="item item-input item-select">
-		    <select>
-		      <option selected>地区</option>
-		      <option>北京</option>
-		      <option>武汉</option>
+		    <select ng-model="city">
+		      <option selected value="">地区全部</option>
+		      <option ng-repeat="city in data_city" value="{{city.id}}">{{city.value}}</option>
 		    </select>
 		 </label>
-		 <label class="item item-input item-select">
-		    <select>
-		      <option selected>筛选</option>
-		      <option>12</option>
-		      <option>123123</option>
-		    </select>
-		 </label>
+		 <button class="button icon-left ion-ios-search button-small button-assertive" ng-click="searchGameList()">筛选</button>
 	</div>
     <div ng-include="'game-list/list/list.html'"></div>
     <div class="footer">

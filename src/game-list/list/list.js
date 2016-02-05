@@ -23,10 +23,6 @@ angular.module('App.GameList.List', []).controller('App.GameList.List.Controller
             
         })
 
-        // $scope.trustAsHtml = function(game){
-        //     return $sce.trustAsHtml(game.introduce)
-        // }
-
         $scope.goRnrooll = function($event, game_id){
             $event.stopPropagation()
             $event.preventDefault()
@@ -35,6 +31,12 @@ angular.module('App.GameList.List', []).controller('App.GameList.List.Controller
             })
         }
 
+        $scope.$on('searchGameList', function($event, month, city) {
+            $scope.game_list = Game.getGameList({
+                cid: city,
+                month: month
+            })
+        })
 
 
     }
