@@ -10,8 +10,6 @@
 	</div>
 	<div class="price">总费用：<span>{{getOrderConfirm.total_fee}} 元</span></div>
     <div class="tabs">
-        <button class="button button-block button-positive" ng-click="postOrderConfirm()">确认支付</button>
+        <button class="button button-block button-positive" ng-click="postOrderConfirm()" ng-disabled="pay_ing">确认支付</button>
     </div>
-
-
 </div>

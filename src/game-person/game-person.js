@@ -42,27 +42,33 @@ angular.module('App.GamePerson', []).controller('App.GamePerson.Controller', [
 
             }
 
+            //表单是否完整
+            var form_flag = true
+
             for (var i = 0; i < $scope.questions.length - 1; i++) {
                 var question = $scope.questions[i]
                 var val = $('#id_' + question.name).val()
-                    // if ( val=== ''){
-                    //     alert('请完善所有资料')
-                    //     break
-                    // }
+                if (val=== ''){
+                    alert('请完善所有资料')
+                    form_flag = false
+                    break
+                }
 
                 data[question.name] = val
             }
 
-
-            Event.postPersonSignForm({
-                id: $state.params.event_id
-            }, data).$promise.then(function(reps) {
-                $state.go('game-package', {
-                    person_sign_id: reps.person_sign_id
-                })
-            }, function(error) {
-                debugger
-            });
+            if(form_flag){
+                Event.postPersonSignForm({
+                    id: $state.params.event_id
+                }, data).$promise.then(function(reps) {
+                    $state.go('game-package', {
+                        person_sign_id: reps.person_sign_id
+                    })
+                }, function(error) {
+                    alert(error)
+                });
+            }
+            
 
         }
 

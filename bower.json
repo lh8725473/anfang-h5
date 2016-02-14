@@ -19,13 +19,18 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "~1.4.8",
+    "angular": "~1.4.9",
     "angular-bootstrap": "~1.0.3",
     "angular-resource": "~1.4.8",
     "angular-ui-router": "~0.2.15",
     "bootstrap": "~3.3.5",
     "bootstrap-sass": "~3.3.5",
+    "ionic": "~1.2.4",
     "jquery": "~2.1.4",
     "normalize-css": "normalize.css#~3.0.3"
+  },
+  "resolutions": {
+    "angular": "~1.4.9",
+    "angular-ui-router": "~0.2.15"
   }
 }

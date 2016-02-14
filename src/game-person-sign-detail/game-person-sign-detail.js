@@ -9,28 +9,24 @@ angular.module('App.GamePersonSignDetail', []).controller('App.GamePersonSignDet
     ) {
         $scope.$state = $state
 
+        //防止重复提交订单支付
+        $scope.pay_ing = false
+
         $scope.getOrderConfirm = Event.getOrderConfirm({
             id: $state.params.person_sign_id
         })
 
         $scope.postOrderConfirm = function() {
-            Event.postOrderConfirm({
-                id: $state.params.person_sign_id
-            }, {
+            $scope.pay_ing = true
+            $.post(
+                config.API_ROOT + '/wechat/pay/get_bridge_params', {
+                    trade_no: $scope.getOrderConfirm.trade_no
+                },
+                function(resp) {
+                    payAction(resp);
+                }
+            );
 
-            }).$promise.then(function(reps) {
-
-                $.get(
-                    config.API_ROOT + '/wechat/pay/get_bridge_params', {},
-                    function(resp) {
-                        console.log(resp);
-                        payAction(resp);
-                    }
-                );
-
-            }, function(error) {
-                debugger
-            });
         }
 
         var defaultConf = {
@@ -46,10 +42,10 @@ angular.module('App.GamePersonSignDetail', []).controller('App.GamePersonSignDet
                 defaultConf = $.extend(defaultConf, resp);
                 wx.config(defaultConf);
                 wx.ready(function() {
-                    $("body").append("js-sdk 初始化成功");
+                    //alert("js-sdk 初始化成功");
                 });
                 wx.error(function(res) {
-                    $("body").append("js-sdk 初始化失败......");
+                    alert("js-sdk 初始化失败......");
                 });
             }
         );
@@ -59,19 +55,20 @@ angular.module('App.GamePersonSignDetail', []).controller('App.GamePersonSignDet
                 success: function(res) {
                     if (res.errMsg == "chooseWXPay:ok") {
                         //支付成功
+                        $state.go('game-list')
                         alert('支付成功')
                     } else {
+                        $scope.pay_ing = false
                         alert(res.errMsg);
                     }
                 },
                 cancel: function(res) {
                     //支付取消
-
+                    $scope.pay_ing = false
                     alert('支付失败')
                 }
             };
             obj = $.extend(obj, params);
-            console.log(obj);
             wx.chooseWXPay(obj);
         };
 
