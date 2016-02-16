@@ -8,11 +8,13 @@ angular.module('App.GameList', ['App.GameList.Carousel','App.GameList.List']).co
         $rootScope,
         $scope,
         $state,
-        Core
+        Core,
+        Game
     ) {
         $scope.$state = $state
         $scope.month = ''
         $scope.city = ''
+        $scope.img_list = []
 
         $scope.month_list = [
             {
@@ -80,6 +82,14 @@ angular.module('App.GameList', ['App.GameList.Carousel','App.GameList.List']).co
         $scope.searchGameList = function(){
             $rootScope.$broadcast('searchGameList', $scope.month, $scope.city)
         }
+
+        $scope.game_list = Game.getGameList()
+
+        $scope.game_list.$promise.then(function(game_list) {
+            game_list.forEach(function(game) {
+                $scope.img_list.push(game.avatar)
+            })
+        })
 
 
     }

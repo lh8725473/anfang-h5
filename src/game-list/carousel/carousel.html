@@ -1,13 +1,7 @@
 <div class="carousel" ng-controller="App.GameList.Carousel.Controller">
     <ion-slide-box on-slide-changed="slideChanged(index)" auto-play="true" show-pager="false" does-continue="true" slide-interval="2000" ng-if="3">
-	    <ion-slide>
-	        <img src="img/gamedetail.png" />
-	    </ion-slide>
-	    <ion-slide>
-	        <img src="img/gamedetail.png"/>
-	    </ion-slide>
-	    <ion-slide>
-	        <img src="img/gamedetail.png" />
+	    <ion-slide ng-repeat="img in img_list">
+	        <img ng-src="{{img}}"/>
 	    </ion-slide>
 	</ion-slide-box>
 </div>

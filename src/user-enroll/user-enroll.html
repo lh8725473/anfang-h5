@@ -1,77 +1,16 @@
 <div class="user-enroll" ng-controller="App.User.Enroll.Controller">
 	<h4 class="title"><i class="icon ion-ios-paper-outline" style="color: #688ae2"></i>我的报名</h4>
 	<div class="list enroll-list scroll-hack">
-	    <a class="item item-thumbnail-left">
+	    <a class="item item-thumbnail-left" ng-repeat="sign in person_sign">
 	      <img src="img/1.png">
-	      <h2>北京马拉松赛跑</h2>
-	      <p>办程   费用： ￥122</p>
-	      <p>2016-01-03</p>
+	      <h2>{{sign.game_name}}</h2>
+	      <p>{{sign.event_name}} 费用：￥{{sign.event.fee}}</p>
+	      <p>{{sign.event.run_time}}</p>
 	      <button class="button button-small button-assertive">
 			已支付
 		  </button>
-		  <button class="button button-small button-assertive">
+		  <button class="button button-small button-assertive" ng-click="goPay($event, sign.id)">
 			去支付
-		  </button>
-	    </a>
-	    <a class="item item-thumbnail-left">
-	      <img src="img/1.png">
-	      <h2>Pretty Hate Machine</h2>
-	      <p>Nine Inch Nails</p>
-	      <button class="button button-small button-assertive">
-			已支付
-		  </button>
-		  <button class="button button-small button-assertive">
-			去支付
-		  </button>
-	    </a>
-	    <a class="item item-thumbnail-left" href="#">
-	      <img src="img/1.png">
-	      <h2>Pretty Hate Machine</h2>
-	      <p>Nine Inch Nails</p>
-	      <button class="button button-small button-assertive">
-			已支付
-		  </button>
-		  <button class="button button-small button-assertive">
-			去支付
-		  </button>
-	    </a>
-	    <a class="item item-thumbnail-left" href="">
-	      <img src="img/1.png">
-	      <h2>Pretty Hate Machine</h2>
-	      <p>Nine Inch Nails</p>
-	      <button class="button button-small button-assertive">
-			一键报名
-		  </button>
-	    </a>
-	    </a>
-	    <a class="item item-thumbnail-left" href="#">
-	      <img src="img/1.png">
-	      <h2>Pretty Hate Machine</h2>
-	      <p>Nine Inch Nails</p>
-	      <button class="button button-small button-assertive">
-			一键报名
-		  </button>
-	    </a>
-	    <a class="item item-thumbnail-left" href="#">
-	      <img src="img/1.png">
-	      <h2>Pretty Hate Machine</h2>
-	      <p>Nine Inch Nails</p>
-	      <button class="button button-small button-assertive">
-			一键报名
-		  </button>
-	    </a><a class="item item-thumbnail-left" href="#">
-	      <img src="img/1.png">
-	      <h2>Pretty Hate Machine</h2>
-	      <p>Nine Inch Nails</p>
-	      <button class="button button-small button-assertive">
-			一键报名
-		  </button>
-	    </a><a class="item item-thumbnail-left" href="#">
-	      <img src="img/1.png">
-	      <h2>Pretty Hate Machine</h2>
-	      <p>Nine Inch Nails</p>
-	      <button class="button button-small button-assertive">
-			一键报名
 		  </button>
 	    </a>
 	</div>

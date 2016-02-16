@@ -23,6 +23,13 @@ angular.module('App.Models').factory('User', [
                     action: 'focus_game'
                 },
                 isArray: true
+            },
+            getPersonSign: {
+                method: "GET",
+                params: {
+                    action: 'person_sign'
+                },
+                isArray: true
             }
 
         })

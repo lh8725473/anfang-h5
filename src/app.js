@@ -122,6 +122,7 @@ appModule.config([
                 templateUrl: 'user-enroll/user-enroll.html'
             })
             .state('user-action', {
+                cache: false,
                 url: '/user-action',
                 templateUrl: 'user-action/user-action.html'
             })

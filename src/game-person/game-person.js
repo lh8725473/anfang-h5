@@ -3,11 +3,13 @@ angular.module('App.GamePerson', []).controller('App.GamePerson.Controller', [
     '$sce',
     '$state',
     'Event',
+    '$timeout',
     function(
         $scope,
         $sce,
         $state,
-        Event
+        Event,
+        $timeout
     ) {
         $scope.$state = $state
 
@@ -27,6 +29,43 @@ angular.module('App.GamePerson', []).controller('App.GamePerson.Controller', [
             questions.forEach(function(question) {
                 question.html = $sce.trustAsHtml(question.field)
             })
+
+            $timeout(function() {
+                $('#id_nationality').change(function() {
+                    var national_id = $('#id_nationality').val()
+                    console.log(national_id)
+                    $.ajax({
+                        url: "http://www.niren.org/api/v1/core/get_province?national_id=" + national_id,
+                        type: "get",
+                        success: function(data) {
+                            data.details.forEach(function(province) {
+                                $("#id_province").append('<option value="'+province.id+'">'+province.value+'</option>')
+                            })
+                        },
+                        error: function(respon) {
+                            debugger
+                        }
+                    })
+                })
+
+                $('#id_province').change(function() {
+                    var id_province = $('#id_province').val()
+                    console.log(id_province)
+                    $.ajax({
+                        url: "http://www.niren.org/api/v1/core/get_province?province_id=" + id_province,
+                        type: "get",
+                        success: function(data) {
+                            data.details.forEach(function(city) {
+                                $("#id_city").append('<option value="'+city.id+'">'+city.value+'</option>')
+                            })
+                        },
+                        error: function(respon) {
+                            debugger
+                        }
+                    })
+                })
+            })
+
         })
 
         $scope.trustAsHtml = function(string) {
@@ -48,7 +87,7 @@ angular.module('App.GamePerson', []).controller('App.GamePerson.Controller', [
             for (var i = 0; i < $scope.questions.length - 1; i++) {
                 var question = $scope.questions[i]
                 var val = $('#id_' + question.name).val()
-                if (val=== ''){
+                if (val === '') {
                     alert('请完善所有资料')
                     form_flag = false
                     break
@@ -57,7 +96,7 @@ angular.module('App.GamePerson', []).controller('App.GamePerson.Controller', [
                 data[question.name] = val
             }
 
-            if(form_flag){
+            if (form_flag) {
                 Event.postPersonSignForm({
                     id: $state.params.event_id
                 }, data).$promise.then(function(reps) {
@@ -68,7 +107,7 @@ angular.module('App.GamePerson', []).controller('App.GamePerson.Controller', [
                     alert(error)
                 });
             }
-            
+
 
         }
 

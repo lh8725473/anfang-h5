@@ -14,7 +14,15 @@ angular.module('App.User.Enroll', []).controller('App.User.Enroll.Controller', [
 
         // })
 
-        $scope.person_sign = User.getUserSign()
+        $scope.person_sign = User.getPersonSign()
+
+        $scope.goPay = function($event, person_sign_id) {
+            $event.stopPropagation()
+            $event.preventDefault()
+            $state.go('game-person-sign-detail', {
+                person_sign_id: person_sign_id
+            })
+        }
 
     }
 ]);

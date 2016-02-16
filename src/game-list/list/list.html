@@ -3,8 +3,11 @@
       <img ng-src="{{game.avatar}}">
       <h2>{{game.name}}</h2>
       <p>{{game.simple}}</p>
-      <button class="button button-small button-assertive" ng-click="goRnrooll($event, game.id)">
+      <button class="button button-small button-assertive" ng-click="goEnroll($event, game.id)">
       一键报名
+      </button>
+      <button class="button button-small button-assertive" ng-click="focusMatch($event, game.id)">
+      关注赛事
       </button>
     </a>
     <!-- <a class="item item-thumbnail-left" ui-sref="game-detail({game_id:1})">

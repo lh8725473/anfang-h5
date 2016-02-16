@@ -17,13 +17,8 @@ angular.module('App.GameList.List', []).controller('App.GameList.List.Controller
 
         // })
 
-        $scope.game_list = Game.getGameList()
-
-        $scope.game_list.$promise.then(function(game) {
-            
-        })
-
-        $scope.goRnrooll = function($event, game_id){
+        
+        $scope.goEnroll = function($event, game_id) {
             $event.stopPropagation()
             $event.preventDefault()
             $state.go('enroll', {
@@ -37,6 +32,21 @@ angular.module('App.GameList.List', []).controller('App.GameList.List.Controller
                 month: month
             })
         })
+
+        $scope.focusMatch = function($event, game_id) {
+            $event.stopPropagation()
+            $event.preventDefault()
+            $.ajax({
+                url: "http://www.niren.org/api/v1/match/focus/" + game_id,
+                type: "POST",
+                success: function(data) {
+                    alert('关注成功')
+                },
+                error: function(respon) {
+                    debugger
+                }
+            })
+        }
 
 
     }
