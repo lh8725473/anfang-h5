@@ -3,7 +3,7 @@ angular.module('App.Models').factory('User', [
     function(
         $resource
     ) {
-        return $resource(config.API_ROOT + '/api/v1/my/:action', {}, {
+        return $resource(config.API_ROOT + '/api/v1/my/:action/:do', {}, {
             getUserProfile: {
                 method: "GET",
                 params: {
@@ -30,6 +30,20 @@ angular.module('App.Models').factory('User', [
                     action: 'person_sign'
                 },
                 isArray: true
+            },
+            getPersonSign: {
+                method: "GET",
+                params: {
+                    action: 'person_sign'
+                },
+                isArray: true
+            },
+            updatePassword: {
+                method: "POST",
+                params: {
+                    action: 'security',
+                    do: 'update_password'
+                }
             }
 
         })

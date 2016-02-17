@@ -1,4 +1,4 @@
-angular.module('App.User.Safe', ['App.User.BindPhone']).controller('App.User.Safe.Controller', [
+angular.module('App.User.Safe', ['App.User.BindPhone', 'App.User.BindEmail']).controller('App.User.Safe.Controller', [
     '$scope',
     'User',
     function(

@@ -1,19 +1,25 @@
-<div class="user-bind-email" ng-controller="App.User.BindPhone.Controller">
+<div class="user-bind-email" ng-controller="App.User.BindEmail.Controller">
 
 	<div class="list list-inset">
 	  <label class="item item-input">
-	    <input type="text" placeholder="请输入邮箱">
+	    <input type="password" placeholder="请输入旧密码" ng-model="oldpwd" maxlength="15">
 	  </label>
-	  <label class="item item-input code">
+	  <label class="item item-input">
+	    <input type="password" placeholder="请输入新密码" ng-model="newpwd1" maxlength="15">
+	  </label>
+	  <label class="item item-input">
+	    <input type="password" placeholder="确认新密码" ng-model="newpwd2" maxlength="15">
+	  </label>
+	  <!-- <label class="item item-input code">
 	    <input type="text" placeholder="请输入验证码">
 	  </label>
 	  <button class="button button-small" ng-click="getCode($event)">
       		获取验证码
-      </button>
+      </button> -->
 	</div>
 
     <div class="tabs">
-		<button class="button button-block button-positive">绑定邮箱</button>
+		<button class="button button-block button-positive" ng-click="updatePassword()">修改密码</button>
 	</div>
 
 </div>

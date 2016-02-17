@@ -448,6 +448,9 @@
   border-top: 15px solid #ddd;
   border-bottom: 15px solid #ddd; }
 
+.user .security {
+  border-top: 15px solid #ddd; }
+
 .user .footer .tab-item {
   max-width: 50%;
   width: 50%; }

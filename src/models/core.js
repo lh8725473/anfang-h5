@@ -25,7 +25,20 @@ angular.module('App.Models').factory('Core', [
                     action: 'focus_game'
                 },
                 isArray: true
+            },
+            sendSmsCode: {
+                method: "POST",
+                params: {
+                    action: 'send_sms_code'
+                }
+            },
+            bindCellphone: {
+                method: "POST",
+                params: {
+                    action: 'bind_cellphone'
+                }
             }
+
 
         })
     }

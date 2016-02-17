@@ -1,16 +1,18 @@
 angular.module('App.User.Action', []).controller('App.User.Action.Controller', [
     '$scope',
     'User',
+    '$state',
     function(
         $scope,
-        User
+        User,
+        $state
     ) {
 
         //$scope.news = [1,2,3,2]
         $scope.focus_games = User.getUserFocus()
 
         $scope.focus_games.$promise.then(function(game) {
-            console.log('aa')
+            
         })
 
         $scope.deleteFocus = function($event, game_id, index){
