@@ -2,10 +2,12 @@ angular.module('App.User.BindEmail', []).controller('App.User.BindEmail.Controll
     '$scope',
     'User',
     'Utils',
+    '$state',
     function(
         $scope,
         User,
-        Utils
+        Utils,
+        $state
     ) {
         $scope.oldpwd = ''
         $scope.newpwd1 = ''
@@ -35,6 +37,7 @@ angular.module('App.User.BindEmail', []).controller('App.User.BindEmail.Controll
             }).$promise.then(function(reps) {
                 if(reps.success){
                     alert('修改密码成功')
+                    $state.go('game-list')
                 }else{
                     alert(reps.reason)
                 }

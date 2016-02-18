@@ -2,10 +2,12 @@ angular.module('App.User.BindPhone', []).controller('App.User.BindPhone.Controll
     '$scope',
     'Utils',
     'Core',
+    '$state',
     function(
         $scope,
         Utils,
-        Core
+        Core,
+        $state
     ) {
 
         $scope.cellphone = ''
@@ -40,6 +42,7 @@ angular.module('App.User.BindPhone', []).controller('App.User.BindPhone.Controll
             }).$promise.then(function(reps) {
                 if(reps.success){
                     alert('绑定成功')
+                    $state.go('game-list')
                 }else{
                     alert(reps.reason)
                 }

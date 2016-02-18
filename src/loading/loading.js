@@ -70,7 +70,7 @@ angular.module('App.Loading', []).controller('App.Loading.Controller', [
                     window_title = '绑定手机'
                     break
                 case "user-bind-email":
-                    window_title = '绑定邮箱'
+                    window_title = '修改密码'
                     break            
                 case "user-me":
                     window_title = '个人详细资料'

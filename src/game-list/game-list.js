@@ -2,12 +2,14 @@ angular.module('App.GameList', ['App.GameList.Carousel','App.GameList.List']).co
     '$rootScope',
     '$scope',
     '$state',
+    '$ionicSlideBoxDelegate',
     'Core',
     'Game',
     function(
         $rootScope,
         $scope,
         $state,
+        $ionicSlideBoxDelegate,
         Core,
         Game
     ) {
@@ -89,6 +91,7 @@ angular.module('App.GameList', ['App.GameList.Carousel','App.GameList.List']).co
             game_list.forEach(function(game) {
                 $scope.img_list.push(game.avatar)
             })
+            $ionicSlideBoxDelegate.update();
         })
 
 
