@@ -108,7 +108,7 @@ angular.module('App.GamePerson', []).controller('App.GamePerson.Controller', [
                         person_sign_id: reps.person_sign_id
                     })
                 }, function(error) {
-                    alert('提交失败，服务器错误')
+                    alert(error.detail)
                     $scope.sub_ing = false
                 });
             }
