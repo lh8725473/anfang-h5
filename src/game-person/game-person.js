@@ -12,6 +12,7 @@ angular.module('App.GamePerson', []).controller('App.GamePerson.Controller', [
         $timeout
     ) {
         $scope.$state = $state
+        $scope.sub_ing = false
 
         // $scope.event_declaration = Event.getEventDeclaration({
         //     id: $state.params.event_id
@@ -50,7 +51,7 @@ angular.module('App.GamePerson', []).controller('App.GamePerson.Controller', [
 
                 $('#id_province').change(function() {
                     var id_province = $('#id_province').val()
-                    console.log(id_province)
+                    $("#id_city").html('')
                     $.ajax({
                         url: "http://www.niren.org/api/v1/core/get_province?province_id=" + id_province,
                         type: "get",
@@ -77,6 +78,8 @@ angular.module('App.GamePerson', []).controller('App.GamePerson.Controller', [
         }
 
         $scope.goGamePackage = function() {
+            $scope.sub_ing = true
+
             var data = {
 
             }
@@ -90,6 +93,7 @@ angular.module('App.GamePerson', []).controller('App.GamePerson.Controller', [
                 if (val === '') {
                     alert('请完善所有资料')
                     form_flag = false
+                    $scope.sub_ing = false
                     break
                 }
 
@@ -104,7 +108,8 @@ angular.module('App.GamePerson', []).controller('App.GamePerson.Controller', [
                         person_sign_id: reps.person_sign_id
                     })
                 }, function(error) {
-                    alert(error)
+                    alert('提交失败，服务器错误')
+                    $scope.sub_ing = false
                 });
             }
 
