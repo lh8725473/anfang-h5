@@ -27,7 +27,7 @@
     "bootstrap-sass": "~3.3.5",
     "ionic": "~1.2.4",
     "jquery": "~2.1.4",
-    "normalize-css": "normalize.css#~3.0.3"
+    "normalize-css": "~3.0.3"
   },
   "resolutions": {
     "angular": "~1.4.9",
