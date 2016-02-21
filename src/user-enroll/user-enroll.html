@@ -4,7 +4,7 @@
 	    <a class="item item-thumbnail-left" ng-repeat="sign in person_sign">
 	      <img ng-src="{{sign.game_avatar}}">
 	      <h2>{{sign.game_name}}</h2>
-	      <p>{{sign.event_name}} 费用：￥{{sign.event.fee}}</p>
+	      <p>{{sign.event_name}} 费用：￥{{sign.total_fee}}</p>
 	      <p>{{sign.event.run_time}}</p>
 	      <button class="button button-small button-balanced" ng-show="sign.payment_status == 1">
 			已支付

@@ -104,9 +104,16 @@ angular.module('App.GamePerson', []).controller('App.GamePerson.Controller', [
                 Event.postPersonSignForm({
                     id: $state.params.event_id
                 }, data).$promise.then(function(reps) {
-                    $state.go('game-package', {
-                        person_sign_id: reps.person_sign_id
-                    })
+                    if(reps.shopping){
+                        $state.go('game-package', {
+                            person_sign_id: reps.person_sign_id
+                        })
+                    }else{
+                        $state.go('game-person-sign-detail', {
+                            person_sign_id: reps.person_sign_id
+                        })
+                    }
+                    
                 }, function(error) {
                     alert(error.detail)
                     $scope.sub_ing = false

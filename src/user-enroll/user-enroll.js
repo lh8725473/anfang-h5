@@ -1,8 +1,10 @@
 angular.module('App.User.Enroll', []).controller('App.User.Enroll.Controller', [
     '$scope',
+    '$state',
     'User',
     function(
         $scope,
+        $state,
         User
     ) {
 

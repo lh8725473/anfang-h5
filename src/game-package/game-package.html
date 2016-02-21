@@ -3,12 +3,13 @@
         <div class="row header">
           <div class="col">选择</div>
           <div class="col">套餐</div>
-          <div class="col">详情</div>
+          <div class="col">价格</div>
         </div>
-        <div class="row data" ng-repeat="product in product_list">
-          <div class="col"><ion-checkbox ng-click="changeCheckbox(product)" ng-model="product.checkbox"></ion-checkbox></div>
+        <div class="row data" ng-repeat="product in product_list" ng-click="changeDetail(product)">
+          <div class="col"><ion-checkbox ng-click="changeCheckbox(product, $event)" ng-model="product.checkbox"></ion-checkbox></div>
           <div class="col">{{product.name}}</div>
-          <div class="col">{{product.simple}}</div>
+          <div class="col">{{product.fee}}</div>
+          <div class="product-detail" ng-show="product.show">{{product.simple}}的方式发送到发送到发送到发送到发送到法第三方士大夫似的</div>
         </div>
     </ion-content>
     <div class="tabs">

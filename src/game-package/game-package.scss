@@ -11,11 +11,14 @@
 		text-align: center;
 		margin-top: 0;
 		border-bottom: 1px solid #b2b2b2;
+		flex-wrap: wrap;
 		.col{
 			line-height: 47px;
 			overflow: hidden;
     		white-space: nowrap;
     		text-overflow: ellipsis;
+    		width: 33% !important;
+    		flex: inherit;
 		}
 		.button-small{
 			margin-top: 10px;
@@ -23,6 +26,10 @@
             color: #fff;
             border-radius: 0;
             width: 75px;
+        }
+        .product-detail{
+        	padding: 5px;
+        	text-align: left;
         }
 	}
 	

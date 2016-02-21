@@ -233,18 +233,24 @@
 .game-package .data {
   text-align: center;
   margin-top: 0;
-  border-bottom: 1px solid #b2b2b2; }
+  border-bottom: 1px solid #b2b2b2;
+  flex-wrap: wrap; }
   .game-package .data .col {
     line-height: 47px;
     overflow: hidden;
     white-space: nowrap;
-    text-overflow: ellipsis; }
+    text-overflow: ellipsis;
+    width: 33% !important;
+    flex: inherit; }
   .game-package .data .button-small {
     margin-top: 10px;
     background-color: #ff7a11;
     color: #fff;
     border-radius: 0;
     width: 75px; }
+  .game-package .data .product-detail {
+    padding: 5px;
+    text-align: left; }
 
 .game-package .scroll-content {
   position: relative; }
@@ -476,6 +482,8 @@
 .user-me .me .item-avatar {
   border-top-width: 15px;
   border-bottom-width: 15px; }
+  .user-me .me .item-avatar img {
+    top: 6px; }
 
 .user-me .me .button {
   margin-top: 10px;

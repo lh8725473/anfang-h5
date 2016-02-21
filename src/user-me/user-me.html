@@ -2,19 +2,12 @@
     <div class="list me">
 	    <a class="item item-avatar item-icon-right" href="#">
 	      <img ng-src="{{user.avatar}}">
-	      <button class="button button-small button-assertive">
-			修改头像
-	  	  </button>
-	      <p>建议使用100px*100px以内的PNG/JPG/GIF文件</p>
+	      <p>芝麻号：{{user.sesame_num}}</p>
 	    </a>
 
 	</div>
 
 	<div class="list">
-	  <label class="item item-input">
-	    <span class="input-label">芝麻号：</span>
-	    <input type="text" ng-model="user.name">
-	  </label>
 	  <label class="item item-input">
 	    <span class="input-label">昵称：</span>
 	    <input type="text" ng-model="user.nick_name">
@@ -35,7 +28,7 @@
 
 	<div class="footer">
     	<div class="tabs tabs-icon-left">
-		  <a class="user-tab tab-item">
+		  <a class="user-tab tab-item" ng-click="editUserProfile(user)">
 		    提交
 		  </a>
 		</div>

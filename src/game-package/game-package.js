@@ -13,13 +13,27 @@ angular.module('App.GamePackage', []).controller('App.GamePackage.Controller', [
 
         $scope.product_list = Product.getProductLsit({})
 
-        var product_id = 0
-        $scope.changeCheckbox = function(product) {
-            $scope.product_list.forEach(function(product) {
+        var product_id = ''
+        $scope.changeCheckbox = function(product, $event) {
+            $event.stopPropagation()
+            //$event.preventDefault()
+            if(!product.checkbox){
                 product.checkbox = false
-            })
-            product.checkbox = true
-            product_id = product.id
+                product.show = false
+                product_id = ''
+            }else{
+                $scope.product_list.forEach(function(product) {
+                    product.checkbox = false
+                })
+                product.checkbox = true
+                product.show = true
+                product_id = product.id
+            }
+        }
+
+
+        $scope.changeDetail = function(product) {
+            product.show = !product.show
         }
 
         $scope.postPersonSignProduct = function() {
