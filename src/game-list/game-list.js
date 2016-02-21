@@ -90,6 +90,12 @@ angular.module('App.GameList', ['App.GameList.Carousel','App.GameList.List']).co
         $scope.game_list.$promise.then(function(game_list) {
             game_list.forEach(function(game) {
                 $scope.img_list.push(game.avatar)
+                if(Date.parse(new Date(game.start_date)) < Date.parse(new Date())){
+                    game.focus_show = false
+                }else{
+                    game.focus_show = true
+                }
+                
             })
             $ionicSlideBoxDelegate.update();
         })
