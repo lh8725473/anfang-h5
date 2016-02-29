@@ -16,17 +16,16 @@ angular.module('App.GamePersonSignDetail', []).controller('App.GamePersonSignDet
             id: $state.params.person_sign_id
         })
 
-        $scope.postOrderConfirm = Event.postOrderConfirm({
+        $scope.postOrder = Event.postOrderConfirm({
             id: $state.params.person_sign_id
-        },{
-            
-        })
+        },{})
 
         $scope.postOrderConfirm = function() {
             $scope.pay_ing = true
             $.post(
-                config.API_ROOT + '/wechat/pay/get_bridge_params', {
-                    trade_no: $scope.getOrderConfirm.trade_no
+                config.API_ROOT + '/wechat/pay/get_bridge_params',
+                {
+                    trade_no: $scope.postOrder.trade_no
                 },
                 function(resp) {
                     payAction(resp);
@@ -36,13 +35,16 @@ angular.module('App.GamePersonSignDetail', []).controller('App.GamePersonSignDet
         }
 
         var defaultConf = {
-            debug: true,
+            debug: false,
             jsApiList: ['chooseWXPay']
         };
-
+        console.log('=======$state.params.person_sign_id======');
+        console.log($state.params.person_sign_id);
         $.post(
             config.API_ROOT + '/wechat/jssdk/signature', {
-                url: config.API_ROOT + '/wap/index.html#/game-person-sign-detail/' //此URL是支付页面的URL
+                url: config.API_ROOT +
+                '/wap/src/src/#/game-person-sign-detail/' +
+                 $state.params.person_sign_id //此URL是支付页面的URL
             },
             function(resp) {
                 defaultConf = $.extend(defaultConf, resp);

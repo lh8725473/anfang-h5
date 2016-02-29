@@ -10,6 +10,12 @@ angular.module('App.Models').factory('User', [
                     action: 'profile'
                 }
             },
+            editUserProfile: {
+                method: "PATCH",
+                params: {
+                    action: 'profile'
+                }
+            },
             getUserSign: {
                 method: "GET",
                 params: {

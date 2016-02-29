@@ -23,6 +23,12 @@ angular.module('App.Models').factory('Game', [
                     event: 'event'
                 },
                 isArray: true
+            },
+            signed:{
+                method: "get",
+                params: {
+                    event: 'signed'
+                }
             }
 
         })
