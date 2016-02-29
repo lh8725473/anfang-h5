@@ -16,6 +16,12 @@ angular.module('App.GamePersonSignDetail', []).controller('App.GamePersonSignDet
             id: $state.params.person_sign_id
         })
 
+        $scope.postOrderConfirm = Event.postOrderConfirm({
+            id: $state.params.person_sign_id
+        },{
+            
+        })
+
         $scope.postOrderConfirm = function() {
             $scope.pay_ing = true
             $.post(
