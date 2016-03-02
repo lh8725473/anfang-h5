@@ -56,7 +56,7 @@ appModule.factory('httpInterceptor', [
             responseError: function(rejection) {
                 // Handle Request error
                 if(rejection.status === 403){
-                    window.location.href = 'http://run.niren.org/wechat/oauth2?next_url=http://www.niren.org/wap/index.html'
+                    window.location.href = config.API_ROOT + '/wechat/oauth2?next_url='+ config.API_ROOT +  +'/wap/src/src/'
                 }
                 return $q.reject(rejection)
             }
@@ -102,7 +102,7 @@ appModule.config([
                 templateUrl: 'game-person/game-person.html'
             })
             .state('game-package', {
-                url: '/game-package/:person_sign_id',
+                url: '/game-package/:event_id/:person_sign_id',
                 templateUrl: 'game-package/game-package.html'
             })
             .state('game-person-sign-detail', {
@@ -110,14 +110,17 @@ appModule.config([
                 templateUrl: 'game-person-sign-detail/game-person-sign-detail.html'
             })
             .state('user', {
+                cache: false,
                 url: '/user',
                 templateUrl: 'user/user.html'
             })
             .state('user-me', {
+                cache: false,
                 url: '/user-me',
                 templateUrl: 'user-me/user-me.html'
             })
             .state('user-enroll', {
+                cache: false,
                 url: '/user-enroll',
                 templateUrl: 'user-enroll/user-enroll.html'
             })
@@ -127,8 +130,14 @@ appModule.config([
                 templateUrl: 'user-action/user-action.html'
             })
             .state('user-integration', {
+                cache: false,
                 url: '/user-integration',
                 templateUrl: 'user-integration/user-integration.html'
+            })
+            .state('user-person', {
+                cache: false,
+                url: '/user-person',
+                templateUrl: 'user-person/user-person.html'
             })
             .state('user-safe', {
                 url: '/user-safe',
@@ -141,7 +150,7 @@ appModule.config([
             .state('user-bind-email', {
                 url: '/user-bind-email',
                 templateUrl: 'user-bind-email/user-bind-email.html'
-            })
+            });
             
             // .state('links.linkRecord', {
             //     url: '/linkRecord',

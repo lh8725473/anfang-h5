@@ -37,18 +37,30 @@ angular.module('App.Models').factory('User', [
                 },
                 isArray: true
             },
-            getPersonSign: {
-                method: "GET",
-                params: {
-                    action: 'person_sign'
-                },
-                isArray: true
-            },
             updatePassword: {
                 method: "POST",
                 params: {
                     action: 'security',
                     do: 'update_password'
+                }
+            },
+            getUserIntegral: {
+                method: "GET",
+                params: {
+                    action: 'integral'
+                }
+            },
+            getUserBaseInfo: {
+                method: "GET",
+                params: {
+                    action: 'base_info'
+                },
+                isArray: true
+            },
+            postUserBaseInfo: {
+                method: "POST",
+                params: {
+                    action: 'base_info'
                 }
             }
 

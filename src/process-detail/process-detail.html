@@ -3,19 +3,19 @@
 	<div class="text-process scroll-hack">
 		<h3 class="orange">赛程介绍：</h3>
 		<div class="game-process" ng-repeat="event in event_list">
-			<h5 class="orange">{{event.name}}</h5>
+			<h4 class="orange">{{event.name}}</h4>
 			<p><span class="orange">报名时间：</span>{{event.reg_start_time}} -- {{event.reg_end_time}}</p>
 			<p><span class="orange">起跑时间：</span>{{event.run_time}}</p>
 			<p><span class="orange">报名费用：</span>{{event.fee}}元/人</p>
 			<p><span class="orange">关门时限：</span>{{event.close_at}}小时</p>
 			<p>
-				<span class="orange">报名资格：</span>
-				<span>{{event.condition}}</span>
+				<span class="orange">年龄范围：</span>
+				<span>{{event.age_min}} 至 {{ event.age_max }}</span>
 			</p>
 
 			<div class="map">
 				<span class="orange">路线图：</span>
-				<img src="img/gamedetail.png">
+				<img src="{{ event.road }}">
 			</div>
 		</div>
 	</div>

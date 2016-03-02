@@ -2,18 +2,17 @@
 	<div ng-include="'game-list/carousel/carousel.html'"></div>
 	<div class="search">
 		<label class="item item-input item-select">
-		    <select ng-model="month">
+		    <select ng-model="month" ng-change="searchGameList()">
 		      <option selected value="">日期全部</option>
 		      <option ng-repeat="month in month_list" value="{{month.key}}">{{month.value}}</option>
 		    </select>
 		 </label>
 		 <label class="item item-input item-select">
-		    <select ng-model="city">
+		    <select ng-model="city" ng-change="searchGameList()">
 		      <option selected value="">地区全部</option>
 		      <option ng-repeat="city in data_city" value="{{city.id}}">{{city.value}}</option>
 		    </select>
 		 </label>
-		 <button class="button icon-left ion-ios-search button-small button-assertive" ng-click="searchGameList()">筛选</button>
 	</div>
     <div ng-include="'game-list/list/list.html'"></div>
     <div class="footer">

@@ -5,16 +5,12 @@ angular.module('App.User.Integration', []).controller('App.User.Integration.Cont
         $scope,
         User
     ) {
+        $scope.integral = User.getUserIntegral();
 
-        //$scope.news = [1,2,3,2]
-        // $scope.user = User.getUser()
-
-        // $scope.user.$promise.then(function(user) {
-        //     console.log('aa')
-
-        // })
-
-
-
+        $scope.integral.$promise.then(function(integral) {
+            if(!integral.points){
+                integral.points = 0;
+            }
+        })
     }
 ]);

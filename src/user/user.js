@@ -1,4 +1,4 @@
-angular.module('App.User', ['App.User.Me', 'App.User.Action', 'App.User.Enroll', 'App.User.Safe']).controller('App.User.Controller', [
+angular.module('App.User', ['App.User.Me', 'App.User.Action', 'App.User.Enroll', 'App.User.Safe', 'App.User.Integration', 'App.User.UserPerson']).controller('App.User.Controller', [
     '$scope',
     'User',
     function(

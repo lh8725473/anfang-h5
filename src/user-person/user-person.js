@@ -1,14 +1,14 @@
-angular.module('App.GamePerson', []).controller('App.GamePerson.Controller', [
+angular.module('App.User.UserPerson', []).controller('App.User.UserPerson.Controller', [
     '$scope',
     '$sce',
     '$state',
-    'Event',
+    'User',
     '$timeout',
     function(
         $scope,
         $sce,
         $state,
-        Event,
+        User,
         $timeout
     ) {
         $scope.$state = $state;
@@ -22,7 +22,7 @@ angular.module('App.GamePerson', []).controller('App.GamePerson.Controller', [
         //     return $sce.trustAsHtml(contents)
         // }
 
-        $scope.questions = Event.getPersonSignForm({
+        $scope.questions = User.getUserBaseInfo({
             id: $state.params.event_id
         })
 
@@ -94,7 +94,7 @@ angular.module('App.GamePerson', []).controller('App.GamePerson.Controller', [
             return checkAllInput(elements);
         };
 
-        $scope.goGamePackage = function($event) {
+        $scope.postUserBaseInfo = function($event) {
             $event.stopPropagation();
             $event.preventDefault();
             $scope.sub_ing = true;
@@ -122,19 +122,11 @@ angular.module('App.GamePerson', []).controller('App.GamePerson.Controller', [
             //}
 
             if (form_flag) {
-                Event.postPersonSignForm({
-                    id: $state.params.event_id
+                User.postUserBaseInfo({
+                    
                 }, data).$promise.then(function(reps) {
-                    if(reps.shopping){
-                        $state.go('game-package', {
-                            event_id: $state.params.event_id,
-                            person_sign_id: reps.person_sign_id
-                        });
-                    }else{
-                        $state.go('game-person-sign-detail', {
-                            person_sign_id: reps.person_sign_id
-                        });
-                    }
+                    alert('保存成功');
+                    $state.go('user');
                     
                 }, function(error) {
                     alert(error.data.detail);

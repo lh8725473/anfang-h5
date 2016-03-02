@@ -643,6 +643,75 @@
   background-color: #ff7a11;
   color: #fff; }
 
+.user-person .list {
+  position: absolute;
+  top: 50px;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  overflow-x: hidden;
+  overflow-y: auto; }
+  .user-person .list .element {
+    padding: 10px 15px; }
+    .user-person .list .element label {
+      color: #ff7a11; }
+    .user-person .list .element div {
+      margin-top: 5px; }
+    .user-person .list .element input {
+      width: 100%;
+      border: 1px solid #ff7a11;
+      padding: 2px 10px; }
+    .user-person .list .element select {
+      width: 100%;
+      border: 1px solid #ff7a11;
+      height: 34px; }
+
+.user-person .header {
+  border-bottom: 1px solid #b2b2b2;
+  font-size: 16px;
+  height: 40px;
+  padding-left: 10px; }
+  .user-person .header span {
+    color: #ff7a11; }
+
+.user-person .contents {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 105px;
+  top: 50px;
+  padding-left: 10px;
+  padding-right: 10px; }
+
+.user-person .item-checkbox {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 50px;
+  border: none;
+  color: #ff7a11; }
+
+.user-person .checkbox-icon:before {
+  border-radius: 0;
+  border-color: #ff7a11; }
+
+.user-person .checkbox input:checked:before, .user-person .checkbox input:checked + .checkbox-icon:before {
+  background: #ff7a11;
+  border-color: #ff7a11; }
+
+.user-person .item {
+  padding-right: 16px; }
+  .user-person .item select {
+    width: 100%; }
+
+.user-person .tabs {
+  background-size: 100% 0; }
+  .user-person .tabs .button-block {
+    border: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: #ff7a11; }
+
 .user-safe .list {
   margin-bottom: 0px; }
 

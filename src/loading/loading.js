@@ -2,11 +2,16 @@ angular.module('App.Loading', []).controller('App.Loading.Controller', [
     '$scope',
     '$rootScope',
     '$timeout',
+    'User',
     function(
         $scope,
         $rootScope,
-        $timeout
+        $timeout,
+        User
     ) {
+        //微信端授权权限判断
+        $scope.user = User.getUserProfile()
+
         $scope.loading = true;
 
         $scope.$on('$includeContentLoaded', function() {

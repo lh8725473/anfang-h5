@@ -8,8 +8,10 @@
 	        </div>
 	        <div class="row data" ng-repeat="event in event_list">
 	          <div class="col">{{event.name}}</div>
-	          <div class="col">{{event.reg_start_time}}</div>
-	          <div class="col"><button class="button button-small" ng-click="goEventDeclaration(event.id)">去报名</button></div>
+	          <div class="col" style="line-height: 20px;">
+                  {{event.reg_start_time}}<br>至<br>{{ event.reg_end_time }}
+              </div>
+	          <div class="col"><button class="button button-small" ng-click="goEventDeclaration(event)">去报名</button></div>
 	        </div>
 	        <p class="tuanti">团体报名请在PC上登陆网站 <a href="http://www.anfang-beijing.com">http://www.anfang-beijing.com</a></p>
 	    </ion-content>

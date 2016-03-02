@@ -37,7 +37,7 @@ angular.module('App.GameList.List', []).controller('App.GameList.List.Controller
             $event.stopPropagation()
             $event.preventDefault()
             $.ajax({
-                url: "http://www.niren.org/api/v1/match/focus/" + game_id,
+                url: config.API_ROOT + "/api/v1/match/focus/" + game_id,
                 type: "POST",
                 success: function(data) {
                     alert('关注成功')

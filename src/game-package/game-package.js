@@ -11,7 +11,9 @@ angular.module('App.GamePackage', []).controller('App.GamePackage.Controller', [
     ) {
         $scope.$state = $state
 
-        $scope.product_list = Product.getProductLsit({})
+        $scope.product_list = Product.getProductList({
+            event_id: $state.params.event_id
+        });
 
         var product_id = ''
         $scope.changeCheckbox = function(product, $event) {
