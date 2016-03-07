@@ -24,6 +24,7 @@
 	var gulpIgnore = require('gulp-ignore');
 	var clean = require('gulp-clean');
 	var revCollector = require('gulp-rev-collector');
+	var livereload = require('gulp-livereload');
 
 	//编译scss
 	gulp.task('sass', function() {
@@ -76,7 +77,9 @@
 
 	//加入md5 replaceMD5
 	gulp.task('rev', function() {
-		return gulp.src(['tmp/js/*.js', 'tmp/css/*.css'], {base: 'tmp'})
+		return gulp.src(['tmp/js/*.js', 'tmp/css/*.css'], {
+				base: 'tmp'
+			})
 			.pipe(rev())
 			.pipe(gulp.dest("build"))
 			.pipe(rev.manifest()) //- 生成一个rev-manifest.json                            
@@ -123,6 +126,19 @@
 			})
 			.pipe(clean());
 	})
+
+	//livereload 改变文件实时刷新页面
+	gulp.task('livereload', function() {
+		livereload.listen({
+			// port: '8000',
+			// host: '127.0.0.1'
+		});
+
+		// src/**/*.*的意思是 src文件夹下的 任何文件夹 的 任何文件
+		gulp.watch('src/**/*.*', function(file) {
+			livereload.changed(file.path);
+		});
+	});
 
 	//发布项目
 	gulp.task('build', gulpsync.sync(['clean', 'sass', 'useref', 'copy', 'rev', 'revCollector', 'inlineAngularTemplates', 'cleanTmp']))
