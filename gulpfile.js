@@ -136,7 +136,7 @@
 
 		// src/**/*.*的意思是 src文件夹下的 任何文件夹 的 任何文件
 		gulp.watch('src/**/*.*', function(file) {
-			livereload.changed(file.path);
+			livereload.changed(file.path)
 		});
 	});
 
